@@ -1,4 +1,6 @@
-[mockup]: readme_images/mock_ups.png
+[mockup1]: login_wireframe_001.png
+[mockup2]: mobile_wireframe_001.png
+[mockup3]: website_wireframe_001.png
 
 README.txt
 Comp20 Semester Group Project: Team 22 
@@ -40,7 +42,7 @@ Use Scenario: When the user first visits the website, they are prompted to creat
 
 7. Electronic mockups of what your team will be developing using wireframes. No hand-drawn mockups accepted.:
 ###Mock-Ups###
-![Computer Generated Mock-Ups][mockup]
+![Computer Generated Mock-Ups][mockup1][mockup2][mockup3]
 
 
 8. Future Features: In the future of this product’s development, we are dreaming up features like:

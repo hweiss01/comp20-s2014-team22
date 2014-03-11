@@ -16,9 +16,13 @@ SpendingRetriever creates a way to centralize and track your online spending/sho
 
 ###Use Scenario: 
 When the user first visits the website, they are prompted to create an account. Next, they are given instructions on how to forward their online shopping emails to SpendingRetriever. From there, we take over. Once emails begin arriving, logged-in users will see data from those expenditures on the SpendingRetriever website, namely:
+    
     *A bar chart of monthly expenditures for the last 12 months
+    
     *A total of expenditures for the current month
+    
     *Recent spending receipts 
+    
     *Clicking on a receipt allows the user to read more about their expenditure.
 
 ### List of features to implement(including the "Pick 5": 

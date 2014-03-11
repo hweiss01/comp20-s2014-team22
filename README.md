@@ -14,7 +14,8 @@ Currently, there is no easy way to track or limit the money you spent across a w
 ###How do you solve the problem?:###
 SpendingRetriever creates a way to centralize and track your online spending/shopping/ordering. Users forward email receipts from online stores to our service. From there, SpendingRetriever sniffs around and paws through the data, analyzing the contents of the messages to track the user’s spending. On our website, users can then examine their data, creating folders and budgets to manage their online spending activities all in one place.
 
-###Use Scenario: When the user first visits the website, they are prompted to create an account. Next, they are given instructions on how to forward their online shopping emails to SpendingRetriever. From there, we take over. Once emails begin arriving, logged-in users will see data from those expenditures on the SpendingRetriever website, namely:
+###Use Scenario: 
+When the user first visits the website, they are prompted to create an account. Next, they are given instructions on how to forward their online shopping emails to SpendingRetriever. From there, we take over. Once emails begin arriving, logged-in users will see data from those expenditures on the SpendingRetriever website, namely:
     *A bar chart of monthly expenditures for the last 12 months
     *A total of expenditures for the current month
     *Recent spending receipts 

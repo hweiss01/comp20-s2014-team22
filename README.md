@@ -41,8 +41,9 @@ Use Scenario: When the user first visits the website, they are prompted to creat
     *Summing spending by category
 
 7. Electronic mockups of what your team will be developing using wireframes. No hand-drawn mockups accepted.:
-###Mock-Ups###
-![Computer Generated Mock-Ups][mockup1][mockup2][mockup3]
+![Computer Generated Mock-Ups][mockup1]
+![Computer Generated Mock-Ups][mockup2]
+![Computer Generated Mock-Ups][mockup3]
 
 
 8. Future Features: In the future of this product’s development, we are dreaming up features like:

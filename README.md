@@ -69,3 +69,7 @@ When the user first visits the website, they are prompted to create an account. 
     *Links back to the product description on the original vendor site
     *Manual input (on our site) for purchases we did not (or could not) detect
 
+#COMMENTS BY MING
+* People shop online that much?
+* Data scraping through email can be quite interesting and difficult
+* An easier alternative: upload a CSV spreadsheet (e.g., exported from your credit card statement). Only problem is you can't get individual items, just vendor.

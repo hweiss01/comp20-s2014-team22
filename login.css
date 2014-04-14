@@ -1,0 +1,22 @@
+
+body{
+	text-align: center;
+}
+
+p{
+font-size: 25px;
+
+}
+
+button{
+	width: 75px;
+	height: 25px;
+	border-radius: 2px;
+}
+
+img{
+	width: 350px;
+	height: 350px;
+
+}
+

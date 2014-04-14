@@ -1,0 +1,30 @@
+{
+  "name": "SpendingRetriever",
+  "version": "0.0.0",
+  "description": "An app that keeps track of your online spending.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuftsdev/comp20-s2014-team22.git"
+  },
+  "keywords": [
+    "receipts",
+    "comp20",
+    "spending",
+    "shopping",
+    "online"
+  ],
+  "author": "Team 22",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuftsdev/comp20-s2014-team22/issues"
+  },
+  "homepage": "https://github.com/tuftsdev/comp20-s2014-team22",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongodb": "~1.4.0"
+  }
+}

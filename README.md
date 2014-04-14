@@ -1,6 +1,6 @@
-[mockup1]: login_wireframe_001.png
-[mockup2]: mobile_wireframe_001.png
-[mockup3]: website_wireframe_001.png
+[mockup1]: images/login_wireframe_001.png
+[mockup2]: images/mobile_wireframe_001.png
+[mockup3]: images/website_wireframe_001.png
 
 README.txt
 Comp20 Semester Group Project: Team 22 
@@ -29,7 +29,7 @@ When the user first visits the website, they are prompted to create an account. 
     *Data / screen scraping
     *Reporting with charts and graphs
     *Send/receive emails
-    *Data storage in the clouds (Amazon AWS)
+    *Server-side data persistence (e.g. MongoDB)
     *Front-end framework (Bootstrap)
     
 ###What data will your prototype be using and collecting: ### 

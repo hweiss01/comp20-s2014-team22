@@ -18,69 +18,51 @@ var enableCORS = function(req, res, next) {
     }
 };
 
-//Dependencies and Environments
-var express = require("express");
-var mongo = require('mongodb');
-var jade = require('jade');
-var app = express(express.logger());
+var express = require('express');
+var routes = require('./routes');
+var user = require('./routes/user');
+var http = require('http');
+var path = require('path');
+
+var app = express();
 app.use(express.logger());
 app.use(express.bodyParser()); //needed for retrieving data from jQuery post
 app.use(enableCORS); //enable CORS
 app.use(app.router); //needed for retrieving data from jQuery post
 
-//MongoDB Setup
+
+var mongo = require('mongodb');
+
 var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/myDatabase';
 
-//connect to Mongo globally
-var db = mongo.Db.connect(mongoUri, function (err, databaseConnection) {
-  db = databaseConnection;
-});
-
-app.get('/', function(req, res) {
-  res.send('Hello, you have arrived at SpendingRetriever 2.0!');
-});
-
-/*
-NEW COLLECTION for each USER
-COLLECTION = WILL
-
-DOCUMENT: JSON object; contains arrays of tuples
-
-WILL
-	{date:1/1/11, items:[[d,w,p], [d,w,p]]}
-	{[d,w,p]}
-	{[d,w,p], [d,w,p], [d,w,p], [d,w,p]}
-*/
-
-
-// GET /retrieve
-app.get('/retrieve', function(req, res) {
-  var user = req.query.username; //from /retrieve?username=SOMEDATA
-
-  db.collection(user, function(er, collection) {
-
-    //sort documents in <user> collection
-    collection.find().toArray(function (err, docs) {
-      var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
-
-      var output = []; //holds JSON objects
-
-      //find data for correct user
-      for (doc in purchaseData) {
-      	for (item in purchaseData[doc]) {
-      		output.push(purchaseData[doc][item]);
-      	}
-      }
-
-      res.send(output); //[ [d,w,p], [d,w,p], ... ]
-    });
-  });
+var db = mongo.Db.connect(mongoUri, function (err, database) {
+  db = database;
 });
 
 
-var port = Number(process.env.PORT || 4000);
-app.listen(port, function() {
-  console.log("Listening on " + port);
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+app.get('/', routes.index);
+app.get('/users', user.list);
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });

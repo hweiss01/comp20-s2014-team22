@@ -5,15 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel = "stylesheet" href="login.css" type="text/css" />
 	<meta charset= 'utf-8'>
+	<script>
+		function RunScript(){
+			user = document.getElementById("user").value;
+			pw= document.getElementById("pw").value;
+			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
+				alert('You logged in!');
+				document.getElementById("user").value = "";
+				document.getElementById("pw").value = "";
+			}
+			else {
+				alert('You did not log in');
+				document.getElementById("user").value = "";
+				document.getElementById("pw").value = "";
+			}
+		}
+	</script>
 </head>
 
 <body>
 
 <img src = "dog.png" alt="Logo" />
 <br/>
-<p> SpendingRetriever </p>
-<button onclick = "Javascript:alert('logged in')">Login</button>
-<button onclick = "Javascript:alert('sign up')">Signup</button>
+<h1> SpendingRetriever </h1>
+
+<h3> Username <input type="text" id = "user" size="30"/></h3>
+<h3> Password <input type ="text" id="pw" size="30"/></h3>
+<button onclick = "RunScript()"> Login</button>
 
 </body>
 

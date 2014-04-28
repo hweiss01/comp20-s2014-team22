@@ -11,7 +11,6 @@
 			user = document.getElementById("user").value;
 			pw= document.getElementById("pw").value;
 			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
-				alert('You logged in!');
 				var uri = "http://pacific-caverns-6327.herokuapp.com/retrieve?username=" + user;
 				window.location.href = uri;
 			}

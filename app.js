@@ -1,12 +1,8 @@
-//SpendingRetriever
-//Spring 2014
-//Brian, Will, etc. of Tufts University
-
+// 
 var express = require("express");
 var mongo = require('mongodb');
 var jade = require('jade');
-
-var app = express(express.logger());
+var app = express();
 
 
 app.get('/', function(req, res) {

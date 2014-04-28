@@ -1,0 +1,753 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'express-generator' ]
+2 info using npm@1.4.6
+3 info using node@v0.10.26
+4 verbose node symlink /usr/local/bin/node
+5 verbose cache add [ 'express-generator', null ]
+6 verbose cache add name=undefined spec="express-generator" args=["express-generator",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'express-generator',
+7 verbose parsed url   path: 'express-generator',
+7 verbose parsed url   href: 'express-generator' }
+8 silly lockFile 198a68d8-express-generator express-generator
+9 verbose lock express-generator /Users/Jshiiba/.npm/198a68d8-express-generator.lock
+10 silly lockFile 198a68d8-express-generator express-generator
+11 silly lockFile 198a68d8-express-generator express-generator
+12 verbose addNamed [ 'express-generator', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile bd41e3d3-express-generator express-generator@
+15 verbose lock express-generator@ /Users/Jshiiba/.npm/bd41e3d3-express-generator.lock
+16 silly addNameRange { name: 'express-generator', range: '*', hasData: false }
+17 verbose url raw express-generator
+18 verbose url resolving [ 'https://registry.npmjs.org/', './express-generator' ]
+19 verbose url resolved https://registry.npmjs.org/express-generator
+20 info trying registry request attempt 1 at 12:55:14
+21 http GET https://registry.npmjs.org/express-generator
+22 http 200 https://registry.npmjs.org/express-generator
+23 silly registry.get cb [ 200,
+23 silly registry.get   { date: 'Mon, 28 Apr 2014 16:55:15 GMT',
+23 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+23 silly registry.get     etag: '"ERC6QCJS6UZE5BUK6HOSI0DMS"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=1',
+23 silly registry.get     'content-length': '7219',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     age: '0',
+23 silly registry.get     'x-served-by': 'cache-v42-ASH, cache-at50-ATL',
+23 silly registry.get     'x-cache': 'MISS, MISS',
+23 silly registry.get     'x-cache-hits': '0, 0',
+23 silly registry.get     'x-timer': 'S1398704115.727603912,VS0,VS24,VE30,VE35',
+23 silly registry.get     vary: 'Accept',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 silly addNameRange number 2 { name: 'express-generator', range: '*', hasData: true }
+25 silly addNameRange versions [ 'express-generator', [ '1.0.0', '3.0.0', '4.0.0' ] ]
+26 verbose addNamed [ 'express-generator', '4.0.0' ]
+27 verbose addNamed [ '4.0.0', '4.0.0' ]
+28 silly lockFile 90c7528a-express-generator-4-0-0 express-generator@4.0.0
+29 verbose lock express-generator@4.0.0 /Users/Jshiiba/.npm/90c7528a-express-generator-4-0-0.lock
+30 silly lockFile 25977c2d-ator-express-generator-4-0-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+31 verbose lock https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz /Users/Jshiiba/.npm/25977c2d-ator-express-generator-4-0-0-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz',
+32 verbose addRemoteTarball   '1b16275739e6bd8cf670f5babc87b65e01bc045b' ]
+33 info retry fetch attempt 1 at 12:55:15
+34 verbose fetch to= /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz
+35 http GET https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+36 http 200 https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+37 verbose tar unpack /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz
+38 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+39 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package /Users/Jshiiba/.npm/071276a6-15831-0-7655090331099927-package.lock
+40 silly lockFile a060976b-15831-0-7655090331099927-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz
+41 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz /Users/Jshiiba/.npm/a060976b-15831-0-7655090331099927-tmp-tgz.lock
+42 silly gunzTarPerm modes [ '755', '644' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm extractEntry .npmignore
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm extractEntry bin/express
+48 silly gunzTarPerm extractEntry templates/css/style.css
+49 silly gunzTarPerm extractEntry templates/css/style.less
+50 silly gunzTarPerm extractEntry templates/css/style.scss
+51 silly gunzTarPerm extractEntry templates/css/style.styl
+52 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+53 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+54 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+55 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+56 silly gunzTarPerm extractEntry templates/jade/error.jade
+57 silly gunzTarPerm extractEntry templates/jade/index.jade
+58 silly gunzTarPerm extractEntry templates/jade/layout.jade
+59 silly gunzTarPerm extractEntry templates/js/app.js
+60 silly gunzTarPerm extractEntry templates/js/routes/index.js
+61 silly gunzTarPerm extractEntry templates/js/routes/users.js
+62 silly gunzTarPerm extractEntry templates/js/www
+63 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+64 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+65 silly lockFile a060976b-15831-0-7655090331099927-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz
+66 silly lockFile a060976b-15831-0-7655090331099927-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/tmp.tgz
+67 verbose tar pack [ '/Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz',
+67 verbose tar pack   '/Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package' ]
+68 verbose tarball /Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+69 verbose folder /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+70 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+71 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package /Users/Jshiiba/.npm/071276a6-15831-0-7655090331099927-package.lock
+72 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+73 verbose lock tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz /Users/Jshiiba/.npm/acc90d7b-ress-generator-4-0-0-package-tgz.lock
+74 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+75 silly lockFile 071276a6-15831-0-7655090331099927-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704115831-0.7655090331099927/package
+76 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+77 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+78 silly lockFile 05c6f594--express-generator-4-0-0-package /Users/Jshiiba/.npm/express-generator/4.0.0/package
+79 verbose lock /Users/Jshiiba/.npm/express-generator/4.0.0/package /Users/Jshiiba/.npm/05c6f594--express-generator-4-0-0-package.lock
+80 silly lockFile 05c6f594--express-generator-4-0-0-package /Users/Jshiiba/.npm/express-generator/4.0.0/package
+81 silly lockFile 05c6f594--express-generator-4-0-0-package /Users/Jshiiba/.npm/express-generator/4.0.0/package
+82 verbose tar unpack /Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+83 silly lockFile e328438e--express-generator-4-0-0-package tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package
+84 verbose lock tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package /Users/Jshiiba/.npm/e328438e--express-generator-4-0-0-package.lock
+85 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+86 verbose lock tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz /Users/Jshiiba/.npm/acc90d7b-ress-generator-4-0-0-package-tgz.lock
+87 silly gunzTarPerm modes [ '755', '644' ]
+88 silly gunzTarPerm extractEntry package.json
+89 silly gunzTarPerm extractEntry .npmignore
+90 silly gunzTarPerm extractEntry README.md
+91 silly gunzTarPerm extractEntry LICENSE
+92 silly gunzTarPerm extractEntry bin/express
+93 silly gunzTarPerm extractEntry templates/css/style.css
+94 silly gunzTarPerm extractEntry templates/css/style.less
+95 silly gunzTarPerm extractEntry templates/css/style.scss
+96 silly gunzTarPerm extractEntry templates/css/style.styl
+97 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+98 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+99 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+100 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+101 silly gunzTarPerm extractEntry templates/jade/error.jade
+102 silly gunzTarPerm extractEntry templates/jade/index.jade
+103 silly gunzTarPerm extractEntry templates/jade/layout.jade
+104 silly gunzTarPerm extractEntry templates/js/app.js
+105 silly gunzTarPerm extractEntry templates/js/routes/index.js
+106 silly gunzTarPerm extractEntry templates/js/routes/users.js
+107 silly gunzTarPerm extractEntry templates/js/www
+108 silly lockFile e328438e--express-generator-4-0-0-package tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package
+109 silly lockFile e328438e--express-generator-4-0-0-package tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package
+110 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+111 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+112 verbose chmod /Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz 644
+113 verbose chown /Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz [ 0, 20 ]
+114 silly lockFile 25977c2d-ator-express-generator-4-0-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+115 silly lockFile 25977c2d-ator-express-generator-4-0-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+116 silly lockFile 90c7528a-express-generator-4-0-0 express-generator@4.0.0
+117 silly lockFile 90c7528a-express-generator-4-0-0 express-generator@4.0.0
+118 silly lockFile bd41e3d3-express-generator express-generator@
+119 silly lockFile bd41e3d3-express-generator express-generator@
+120 silly resolved [ { name: 'express-generator',
+120 silly resolved     description: 'Express\' application generator',
+120 silly resolved     version: '4.0.0',
+120 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+120 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+120 silly resolved     dependencies: { commander: '1.3.2', mkdirp: '0.3.5' },
+120 silly resolved     keywords:
+120 silly resolved      [ 'express',
+120 silly resolved        'framework',
+120 silly resolved        'sinatra',
+120 silly resolved        'web',
+120 silly resolved        'rest',
+120 silly resolved        'restful',
+120 silly resolved        'router',
+120 silly resolved        'app',
+120 silly resolved        'api' ],
+120 silly resolved     repository: { type: 'git', url: 'git://github.com/expressjs/generator' },
+120 silly resolved     main: 'bin/express',
+120 silly resolved     bin: { express: './bin/express' },
+120 silly resolved     engines: { node: '>= 0.8.0' },
+120 silly resolved     readme: '[![express logo](http://f.cl.ly/items/0V2S1n0K1i3y1c122g04/Screen%20Shot%202012-04-11%20at%209.59.42%20AM.png)](http://expressjs.com/)\n\n  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).\n\n  [![Gittip](http://img.shields.io/gittip/visionmedia.png)](https://www.gittip.com/visionmedia/)\n\n## Quick Start\n\n The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:\n\n Create the app:\n\n    $ npm install -g express-generator\n    $ express /tmp/foo && cd /tmp/foo\n\n Install dependencies:\n\n    $ npm install\n\n Rock and Roll\n\n    $ npm start\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2009-2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+120 silly resolved     readmeFilename: 'README.md',
+120 silly resolved     bugs: { url: 'https://github.com/expressjs/generator/issues' },
+120 silly resolved     homepage: 'https://github.com/expressjs/generator',
+120 silly resolved     _id: 'express-generator@4.0.0',
+120 silly resolved     dist: { shasum: '0926c0cd8439cf767c783e551c0dde831ee8b9c0' },
+120 silly resolved     _from: 'express-generator@',
+120 silly resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz' } ]
+121 info install express-generator@4.0.0 into /usr/local/lib
+122 info installOne express-generator@4.0.0
+123 info /usr/local/lib/node_modules/express-generator unbuild
+124 verbose tar unpack /Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+125 silly lockFile 2135fd25-b-node-modules-express-generator tar:///usr/local/lib/node_modules/express-generator
+126 verbose lock tar:///usr/local/lib/node_modules/express-generator /Users/Jshiiba/.npm/2135fd25-b-node-modules-express-generator.lock
+127 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+128 verbose lock tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz /Users/Jshiiba/.npm/acc90d7b-ress-generator-4-0-0-package-tgz.lock
+129 silly gunzTarPerm modes [ '755', '644' ]
+130 silly gunzTarPerm extractEntry package.json
+131 silly gunzTarPerm extractEntry .npmignore
+132 silly gunzTarPerm extractEntry README.md
+133 silly gunzTarPerm extractEntry LICENSE
+134 silly gunzTarPerm extractEntry bin/express
+135 silly gunzTarPerm extractEntry templates/css/style.css
+136 silly gunzTarPerm extractEntry templates/css/style.less
+137 silly gunzTarPerm extractEntry templates/css/style.scss
+138 silly gunzTarPerm extractEntry templates/css/style.styl
+139 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+140 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+141 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+142 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+143 silly gunzTarPerm extractEntry templates/jade/error.jade
+144 silly gunzTarPerm extractEntry templates/jade/index.jade
+145 silly gunzTarPerm extractEntry templates/jade/layout.jade
+146 silly gunzTarPerm extractEntry templates/js/app.js
+147 silly gunzTarPerm extractEntry templates/js/routes/index.js
+148 silly gunzTarPerm extractEntry templates/js/routes/users.js
+149 silly gunzTarPerm extractEntry templates/js/www
+150 silly lockFile 2135fd25-b-node-modules-express-generator tar:///usr/local/lib/node_modules/express-generator
+151 silly lockFile 2135fd25-b-node-modules-express-generator tar:///usr/local/lib/node_modules/express-generator
+152 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+153 silly lockFile acc90d7b-ress-generator-4-0-0-package-tgz tar:///Users/Jshiiba/.npm/express-generator/4.0.0/package.tgz
+154 info preinstall express-generator@4.0.0
+155 verbose readDependencies using package.json deps
+156 verbose readDependencies using package.json deps
+157 verbose cache add [ 'commander@1.3.2', null ]
+158 verbose cache add name=undefined spec="commander@1.3.2" args=["commander@1.3.2",null]
+159 verbose parsed url { protocol: null,
+159 verbose parsed url   slashes: null,
+159 verbose parsed url   auth: null,
+159 verbose parsed url   host: null,
+159 verbose parsed url   port: null,
+159 verbose parsed url   hostname: null,
+159 verbose parsed url   hash: null,
+159 verbose parsed url   search: null,
+159 verbose parsed url   query: null,
+159 verbose parsed url   pathname: 'commander@1.3.2',
+159 verbose parsed url   path: 'commander@1.3.2',
+159 verbose parsed url   href: 'commander@1.3.2' }
+160 verbose cache add name="commander" spec="1.3.2" args=["commander","1.3.2"]
+161 verbose parsed url { protocol: null,
+161 verbose parsed url   slashes: null,
+161 verbose parsed url   auth: null,
+161 verbose parsed url   host: null,
+161 verbose parsed url   port: null,
+161 verbose parsed url   hostname: null,
+161 verbose parsed url   hash: null,
+161 verbose parsed url   search: null,
+161 verbose parsed url   query: null,
+161 verbose parsed url   pathname: '1.3.2',
+161 verbose parsed url   path: '1.3.2',
+161 verbose parsed url   href: '1.3.2' }
+162 verbose addNamed [ 'commander', '1.3.2' ]
+163 verbose addNamed [ '1.3.2', '1.3.2' ]
+164 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+165 verbose lock commander@1.3.2 /Users/Jshiiba/.npm/2016e061-commander-1-3-2.lock
+166 verbose cache add [ 'mkdirp@0.3.5', null ]
+167 verbose cache add name=undefined spec="mkdirp@0.3.5" args=["mkdirp@0.3.5",null]
+168 verbose parsed url { protocol: null,
+168 verbose parsed url   slashes: null,
+168 verbose parsed url   auth: null,
+168 verbose parsed url   host: null,
+168 verbose parsed url   port: null,
+168 verbose parsed url   hostname: null,
+168 verbose parsed url   hash: null,
+168 verbose parsed url   search: null,
+168 verbose parsed url   query: null,
+168 verbose parsed url   pathname: 'mkdirp@0.3.5',
+168 verbose parsed url   path: 'mkdirp@0.3.5',
+168 verbose parsed url   href: 'mkdirp@0.3.5' }
+169 verbose cache add name="mkdirp" spec="0.3.5" args=["mkdirp","0.3.5"]
+170 verbose parsed url { protocol: null,
+170 verbose parsed url   slashes: null,
+170 verbose parsed url   auth: null,
+170 verbose parsed url   host: null,
+170 verbose parsed url   port: null,
+170 verbose parsed url   hostname: null,
+170 verbose parsed url   hash: null,
+170 verbose parsed url   search: null,
+170 verbose parsed url   query: null,
+170 verbose parsed url   pathname: '0.3.5',
+170 verbose parsed url   path: '0.3.5',
+170 verbose parsed url   href: '0.3.5' }
+171 verbose addNamed [ 'mkdirp', '0.3.5' ]
+172 verbose addNamed [ '0.3.5', '0.3.5' ]
+173 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+174 verbose lock mkdirp@0.3.5 /Users/Jshiiba/.npm/67d2df2a-mkdirp-0-3-5.lock
+175 verbose url raw commander/1.3.2
+176 verbose url resolving [ 'https://registry.npmjs.org/', './commander/1.3.2' ]
+177 verbose url resolved https://registry.npmjs.org/commander/1.3.2
+178 info trying registry request attempt 1 at 12:55:16
+179 verbose etag "83LHVZAWSKY9NYX9GUVHR4F2G"
+180 http GET https://registry.npmjs.org/commander/1.3.2
+181 verbose url raw mkdirp/0.3.5
+182 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp/0.3.5' ]
+183 verbose url resolved https://registry.npmjs.org/mkdirp/0.3.5
+184 info trying registry request attempt 1 at 12:55:16
+185 verbose etag "EMRW7RHBA5PKKC4FVLRLOY90"
+186 http GET https://registry.npmjs.org/mkdirp/0.3.5
+187 http 200 https://registry.npmjs.org/commander/1.3.2
+188 silly registry.get cb [ 200,
+188 silly registry.get   { date: 'Mon, 28 Apr 2014 16:55:16 GMT',
+188 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+188 silly registry.get     etag: '"4ALT753SRL5XLDGHCLR25Y5UC"',
+188 silly registry.get     'content-type': 'application/json',
+188 silly registry.get     via: '1.1 varnish',
+188 silly registry.get     'cache-control': 'max-age=1',
+188 silly registry.get     'content-length': '878',
+188 silly registry.get     'accept-ranges': 'bytes',
+188 silly registry.get     age: '148',
+188 silly registry.get     'x-served-by': 'cache-v42-ASH, cache-at52-ATL',
+188 silly registry.get     'x-cache': 'HIT, HIT',
+188 silly registry.get     'x-cache-hits': '2, 1',
+188 silly registry.get     'x-timer': 'S1398700408.942517757,VS0,VS9,VE9,VE3707767',
+188 silly registry.get     vary: 'Accept',
+188 silly registry.get     'keep-alive': 'timeout=10, max=50',
+188 silly registry.get     connection: 'Keep-Alive' } ]
+189 http 200 https://registry.npmjs.org/mkdirp/0.3.5
+190 silly registry.get cb [ 200,
+190 silly registry.get   { date: 'Mon, 28 Apr 2014 16:55:16 GMT',
+190 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+190 silly registry.get     etag: '"21NC6G0JP2FT7XWKOCYY6JIQP"',
+190 silly registry.get     'content-type': 'application/json',
+190 silly registry.get     via: '1.1 varnish',
+190 silly registry.get     'cache-control': 'max-age=1',
+190 silly registry.get     'content-length': '712',
+190 silly registry.get     'accept-ranges': 'bytes',
+190 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-at50-ATL',
+190 silly registry.get     'x-cache': 'HIT, MISS',
+190 silly registry.get     'x-cache-hits': '3, 0',
+190 silly registry.get     'x-timer': 'S1398449721.538273811,VS0,VS6,VE6,VE254395173',
+190 silly registry.get     vary: 'Accept',
+190 silly registry.get     'keep-alive': 'timeout=10, max=50',
+190 silly registry.get     connection: 'Keep-Alive' } ]
+191 silly lockFile 0d5429af-rg-commander-commander-1-3-2-tgz https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+192 verbose lock https://registry.npmjs.org/commander/-/commander-1.3.2.tgz /Users/Jshiiba/.npm/0d5429af-rg-commander-commander-1-3-2-tgz.lock
+193 silly lockFile 7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+194 verbose lock https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz /Users/Jshiiba/.npm/7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz.lock
+195 verbose addRemoteTarball [ 'https://registry.npmjs.org/commander/-/commander-1.3.2.tgz',
+195 verbose addRemoteTarball   '8a8f30ec670a6fdd64af52f1914b907d79ead5b5' ]
+196 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz',
+196 verbose addRemoteTarball   'de3e5f8961c88c787ee1368df849ac4413eca8d7' ]
+197 info retry fetch attempt 1 at 12:55:16
+198 verbose fetch to= /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz
+199 info retry fetch attempt 1 at 12:55:16
+200 verbose fetch to= /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz
+201 http GET https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+202 http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+203 http 200 https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+204 http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+205 verbose tar unpack /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz
+206 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+207 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package /Users/Jshiiba/.npm/0dd6a6f4-16765-0-6013625196646899-package.lock
+208 silly lockFile 05dd202b-16765-0-6013625196646899-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz
+209 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz /Users/Jshiiba/.npm/05dd202b-16765-0-6013625196646899-tmp-tgz.lock
+210 verbose tar unpack /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz
+211 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+212 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package /Users/Jshiiba/.npm/3bc1aad9-16766-0-5911039954517037-package.lock
+213 silly lockFile 6cc2f169-16766-0-5911039954517037-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz
+214 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz /Users/Jshiiba/.npm/6cc2f169-16766-0-5911039954517037-tmp-tgz.lock
+215 silly gunzTarPerm modes [ '755', '644' ]
+216 silly gunzTarPerm modes [ '755', '644' ]
+217 silly gunzTarPerm extractEntry package.json
+218 silly gunzTarPerm extractEntry package.json
+219 silly gunzTarPerm extractEntry .npmignore
+220 silly gunzTarPerm extractEntry LICENSE
+221 silly gunzTarPerm extractEntry index.js
+222 silly gunzTarPerm extractEntry History.md
+223 silly gunzTarPerm extractEntry Readme.md
+224 silly gunzTarPerm extractEntry index.js
+225 silly gunzTarPerm extractEntry examples/pow.js
+226 silly gunzTarPerm extractEntry readme.markdown
+227 silly gunzTarPerm extractEntry test/perm.js
+228 silly gunzTarPerm extractEntry test/perm_sync.js
+229 silly gunzTarPerm extractEntry test/race.js
+230 silly gunzTarPerm extractEntry test/rel.js
+231 silly gunzTarPerm extractEntry test/return.js
+232 silly gunzTarPerm extractEntry test/clobber.js
+233 silly gunzTarPerm extractEntry test/root.js
+234 silly gunzTarPerm extractEntry test/umask.js
+235 silly gunzTarPerm extractEntry test/sync.js
+236 silly gunzTarPerm extractEntry test/chmod.js
+237 silly gunzTarPerm extractEntry test/umask_sync.js
+238 silly gunzTarPerm extractEntry test/return_sync.js
+239 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+240 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+241 silly lockFile 05dd202b-16765-0-6013625196646899-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz
+242 silly lockFile 05dd202b-16765-0-6013625196646899-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/tmp.tgz
+243 verbose tar pack [ '/Users/Jshiiba/.npm/commander/1.3.2/package.tgz',
+243 verbose tar pack   '/Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package' ]
+244 verbose tarball /Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+245 verbose folder /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+246 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+247 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package /Users/Jshiiba/.npm/0dd6a6f4-16765-0-6013625196646899-package.lock
+248 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+249 verbose lock tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz /Users/Jshiiba/.npm/ad66b624--npm-commander-1-3-2-package-tgz.lock
+250 silly gunzTarPerm extractEntry test/mkdirp.js
+251 silly gunzTarPerm extractEntry .travis.yml
+252 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+253 silly lockFile 0dd6a6f4-16765-0-6013625196646899-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116765-0.6013625196646899/package
+254 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+255 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+256 silly lockFile 685a0a56-iiba-npm-commander-1-3-2-package /Users/Jshiiba/.npm/commander/1.3.2/package
+257 verbose lock /Users/Jshiiba/.npm/commander/1.3.2/package /Users/Jshiiba/.npm/685a0a56-iiba-npm-commander-1-3-2-package.lock
+258 silly lockFile 685a0a56-iiba-npm-commander-1-3-2-package /Users/Jshiiba/.npm/commander/1.3.2/package
+259 silly lockFile 685a0a56-iiba-npm-commander-1-3-2-package /Users/Jshiiba/.npm/commander/1.3.2/package
+260 verbose tar unpack /Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+261 silly lockFile 00f1bf56-iiba-npm-commander-1-3-2-package tar:///Users/Jshiiba/.npm/commander/1.3.2/package
+262 verbose lock tar:///Users/Jshiiba/.npm/commander/1.3.2/package /Users/Jshiiba/.npm/00f1bf56-iiba-npm-commander-1-3-2-package.lock
+263 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+264 verbose lock tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz /Users/Jshiiba/.npm/ad66b624--npm-commander-1-3-2-package-tgz.lock
+265 silly gunzTarPerm modes [ '755', '644' ]
+266 silly gunzTarPerm extractEntry package.json
+267 silly gunzTarPerm extractEntry index.js
+268 silly gunzTarPerm extractEntry History.md
+269 silly gunzTarPerm extractEntry Readme.md
+270 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+271 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+272 silly lockFile 6cc2f169-16766-0-5911039954517037-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz
+273 silly lockFile 6cc2f169-16766-0-5911039954517037-tmp-tgz tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/tmp.tgz
+274 verbose tar pack [ '/Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz',
+274 verbose tar pack   '/Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package' ]
+275 verbose tarball /Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+276 verbose folder /Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+277 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+278 verbose lock tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package /Users/Jshiiba/.npm/3bc1aad9-16766-0-5911039954517037-package.lock
+279 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+280 verbose lock tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz /Users/Jshiiba/.npm/68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz.lock
+281 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+282 silly lockFile 3bc1aad9-16766-0-5911039954517037-package tar:///Users/Jshiiba/tmp/npm-19810-7aGMQOLw/1398704116766-0.5911039954517037/package
+283 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+284 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+285 silly lockFile 6036e254-Jshiiba-npm-mkdirp-0-3-5-package /Users/Jshiiba/.npm/mkdirp/0.3.5/package
+286 verbose lock /Users/Jshiiba/.npm/mkdirp/0.3.5/package /Users/Jshiiba/.npm/6036e254-Jshiiba-npm-mkdirp-0-3-5-package.lock
+287 silly lockFile 00f1bf56-iiba-npm-commander-1-3-2-package tar:///Users/Jshiiba/.npm/commander/1.3.2/package
+288 silly lockFile 00f1bf56-iiba-npm-commander-1-3-2-package tar:///Users/Jshiiba/.npm/commander/1.3.2/package
+289 silly lockFile 6036e254-Jshiiba-npm-mkdirp-0-3-5-package /Users/Jshiiba/.npm/mkdirp/0.3.5/package
+290 silly lockFile 6036e254-Jshiiba-npm-mkdirp-0-3-5-package /Users/Jshiiba/.npm/mkdirp/0.3.5/package
+291 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+292 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+293 verbose tar unpack /Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+294 silly lockFile 4aa6bd08-Jshiiba-npm-mkdirp-0-3-5-package tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package
+295 verbose lock tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package /Users/Jshiiba/.npm/4aa6bd08-Jshiiba-npm-mkdirp-0-3-5-package.lock
+296 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+297 verbose lock tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz /Users/Jshiiba/.npm/68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz.lock
+298 silly gunzTarPerm modes [ '755', '644' ]
+299 verbose chmod /Users/Jshiiba/.npm/commander/1.3.2/package.tgz 644
+300 verbose chown /Users/Jshiiba/.npm/commander/1.3.2/package.tgz [ 0, 20 ]
+301 silly lockFile 0d5429af-rg-commander-commander-1-3-2-tgz https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+302 silly lockFile 0d5429af-rg-commander-commander-1-3-2-tgz https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+303 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+304 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+305 silly gunzTarPerm extractEntry package.json
+306 silly gunzTarPerm extractEntry .npmignore
+307 silly gunzTarPerm extractEntry LICENSE
+308 silly gunzTarPerm extractEntry index.js
+309 silly gunzTarPerm extractEntry .travis.yml
+310 silly gunzTarPerm extractEntry examples/pow.js
+311 silly gunzTarPerm extractEntry readme.markdown
+312 silly gunzTarPerm extractEntry test/chmod.js
+313 silly gunzTarPerm extractEntry test/perm.js
+314 silly gunzTarPerm extractEntry test/perm_sync.js
+315 silly gunzTarPerm extractEntry test/race.js
+316 silly gunzTarPerm extractEntry test/mkdirp.js
+317 silly gunzTarPerm extractEntry test/return.js
+318 silly gunzTarPerm extractEntry test/return_sync.js
+319 silly gunzTarPerm extractEntry test/root.js
+320 silly gunzTarPerm extractEntry test/sync.js
+321 silly gunzTarPerm extractEntry test/umask.js
+322 silly gunzTarPerm extractEntry test/clobber.js
+323 silly gunzTarPerm extractEntry test/umask_sync.js
+324 silly gunzTarPerm extractEntry test/rel.js
+325 silly lockFile 4aa6bd08-Jshiiba-npm-mkdirp-0-3-5-package tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package
+326 silly lockFile 4aa6bd08-Jshiiba-npm-mkdirp-0-3-5-package tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package
+327 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+328 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+329 verbose chmod /Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz 644
+330 verbose chown /Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz [ 0, 20 ]
+331 silly lockFile 7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+332 silly lockFile 7b2ebe55-pmjs-org-mkdirp-mkdirp-0-3-5-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+333 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+334 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+335 silly resolved [ { name: 'commander',
+335 silly resolved     version: '1.3.2',
+335 silly resolved     description: 'the complete solution for node.js command-line programs',
+335 silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+335 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+335 silly resolved     repository:
+335 silly resolved      { type: 'git',
+335 silly resolved        url: 'https://github.com/visionmedia/commander.js.git' },
+335 silly resolved     dependencies: { keypress: '0.1.x' },
+335 silly resolved     devDependencies: { should: '>= 0.0.1' },
+335 silly resolved     scripts: { test: 'make test' },
+335 silly resolved     main: 'index',
+335 silly resolved     engines: { node: '>= 0.6.x' },
+335 silly resolved     readme: '# Commander.js\n\n  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby\'s [commander](https://github.com/visionmedia/commander).\n\n [![Build Status](https://secure.travis-ci.org/visionmedia/commander.js.png)](http://travis-ci.org/visionmedia/commander.js)\n\n## Installation\n\n    $ npm install commander\n\n## Option parsing\n\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'commander\');\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-p, --peppers\', \'Add peppers\')\n  .option(\'-P, --pineapple\', \'Add pineapple\')\n  .option(\'-b, --bbq\', \'Add bbq sauce\')\n  .option(\'-c, --cheese [type]\', \'Add the specified type of cheese [marble]\', \'marble\')\n  .parse(process.argv);\n\nconsole.log(\'you ordered a pizza with:\');\nif (program.peppers) console.log(\'  - peppers\');\nif (program.pineapple) console.log(\'  - pineapple\');\nif (program.bbq) console.log(\'  - bbq\');\nconsole.log(\'  - %s cheese\', program.cheese);\n```\n\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.\n\n## Automated --help\n\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\n\n```  \n $ ./examples/pizza --help\n\n   Usage: pizza [options]\n\n   Options:\n\n     -V, --version        output the version number\n     -p, --peppers        Add peppers\n     -P, --pineapple      Add pineapple\n     -b, --bbq            Add bbq sauce\n     -c, --cheese <type>  Add the specified type of cheese [marble]\n     -h, --help           output usage information\n\n```\n\n## Coercion\n\n```js\nfunction range(val) {\n  return val.split(\'..\').map(Number);\n}\n\nfunction list(val) {\n  return val.split(\',\');\n}\n\nprogram\n  .version(\'0.0.1\')\n  .usage(\'[options] <file ...>\')\n  .option(\'-i, --integer <n>\', \'An integer argument\', parseInt)\n  .option(\'-f, --float <n>\', \'A float argument\', parseFloat)\n  .option(\'-r, --range <a>..<b>\', \'A range\', range)\n  .option(\'-l, --list <items>\', \'A list\', list)\n  .option(\'-o, --optional [value]\', \'An optional value\')\n  .parse(process.argv);\n\nconsole.log(\' int: %j\', program.integer);\nconsole.log(\' float: %j\', program.float);\nconsole.log(\' optional: %j\', program.optional);\nprogram.range = program.range || [];\nconsole.log(\' range: %j..%j\', program.range[0], program.range[1]);\nconsole.log(\' list: %j\', program.list);\nconsole.log(\' args: %j\', program.args);\n```\n\n## Custom help\n\n You can display arbitrary `-h, --help` information\n by listening for "--help". Commander will automatically\n exit once you are done so that the remainder of your program\n does not execute causing undesired behaviours, for example\n in the following executable "stuff" will not output when\n `--help` is used.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'../\');\n\nfunction list(val) {\n  return val.split(\',\').map(Number);\n}\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-f, --foo\', \'enable some foo\')\n  .option(\'-b, --bar\', \'enable some bar\')\n  .option(\'-B, --baz\', \'enable some baz\');\n\n// must be before .parse() since\n// node\'s emit() is immediate\n\nprogram.on(\'--help\', function(){\n  console.log(\'  Examples:\');\n  console.log(\'\');\n  console.log(\'    $ custom-help --help\');\n  console.log(\'    $ custom-help -h\');\n  console.log(\'\');\n});\n\nprogram.parse(process.argv);\n\nconsole.log(\'stuff\');\n```\n\nyielding the following help output:\n\n```\n\nUsage: custom-help [options]\n\nOptions:\n\n  -h, --help     output usage information\n  -V, --version  output the version number\n  -f, --foo      enable some foo\n  -b, --bar      enable some bar\n  -B, --baz      enable some baz\n\nExamples:\n\n  $ custom-help --help\n  $ custom-help -h\n\n```\n\n## .prompt(msg, fn)\n\n Single-line prompt:\n\n```js\nprogram.prompt(\'name: \', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Multi-line prompt:\n\n```js\nprogram.prompt(\'description:\', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Coercion:\n\n```js\nprogram.prompt(\'Age: \', Number, function(age){\n  console.log(\'age: %j\', age);\n});\n```\n\n```js\nprogram.prompt(\'Birthdate: \', Date, function(date){\n  console.log(\'date: %s\', date);\n});\n```\n\n```js\nprogram.prompt(\'Email: \', /^.+@.+\\..+$/, function(email){\n  console.log(\'email: %j\', email);\n});\n```\n\n## .password(msg[, mask], fn)\n\nPrompt for password without echoing:\n\n```js\nprogram.password(\'Password: \', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\nPrompt for password with mask char "*":\n\n```js\nprogram.password(\'Password: \', \'*\', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\n## .confirm(msg, fn)\n\n Confirm with the given `msg`:\n\n```js\nprogram.confirm(\'continue? \', function(ok){\n  console.log(\' got %j\', ok);\n});\n```\n\n## .choose(list, fn)\n\n Let the user choose from a `list`:\n\n```js\nvar list = [\'tobi\', \'loki\', \'jane\', \'manny\', \'luna\'];\n\nconsole.log(\'Choose the coolest pet:\');\nprogram.choose(list, function(i){\n  console.log(\'you chose %d "%s"\', i, list[i]);\n});\n```\n\n## .outputHelp()\n\n  Output help information without exiting.\n\n## .help()\n\n  Output help information and exit immediately.\n\n## Links\n\n - [API documentation](http://visionmedia.github.com/commander.js/)\n - [ascii tables](https://github.com/LearnBoost/cli-table)\n - [progress bars](https://github.com/visionmedia/node-progress)\n - [more progress bars](https://github.com/substack/node-multimeter)\n - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+335 silly resolved     readmeFilename: 'Readme.md',
+335 silly resolved     bugs: { url: 'https://github.com/visionmedia/commander.js/issues' },
+335 silly resolved     homepage: 'https://github.com/visionmedia/commander.js',
+335 silly resolved     _id: 'commander@1.3.2',
+335 silly resolved     dist: { shasum: 'eed142358f5036abfce89e56703dffc16d69584c' },
+335 silly resolved     _from: 'commander@1.3.2',
+335 silly resolved     _resolved: 'https://registry.npmjs.org/commander/-/commander-1.3.2.tgz' },
+335 silly resolved   { name: 'mkdirp',
+335 silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+335 silly resolved     version: '0.3.5',
+335 silly resolved     author:
+335 silly resolved      { name: 'James Halliday',
+335 silly resolved        email: 'mail@substack.net',
+335 silly resolved        url: 'http://substack.net' },
+335 silly resolved     main: './index',
+335 silly resolved     keywords: [ 'mkdir', 'directory' ],
+335 silly resolved     repository:
+335 silly resolved      { type: 'git',
+335 silly resolved        url: 'http://github.com/substack/node-mkdirp.git' },
+335 silly resolved     scripts: { test: 'tap test/*.js' },
+335 silly resolved     devDependencies: { tap: '~0.4.0' },
+335 silly resolved     license: 'MIT',
+335 silly resolved     readme: '# mkdirp\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\n# example\n\n## pow.js\n\n```js\nvar mkdirp = require(\'mkdirp\');\n    \nmkdirp(\'/tmp/foo/bar/baz\', function (err) {\n    if (err) console.error(err)\n    else console.log(\'pow!\')\n});\n```\n\nOutput\n\n```\npow!\n```\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\n# methods\n\n```js\nvar mkdirp = require(\'mkdirp\');\n```\n\n## mkdirp(dir, mode, cb)\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\n## mkdirp.sync(dir, mode)\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\n# install\n\nWith [npm](http://npmjs.org) do:\n\n```\nnpm install mkdirp\n```\n\n# license\n\nMIT\n',
+335 silly resolved     readmeFilename: 'readme.markdown',
+335 silly resolved     bugs: { url: 'https://github.com/substack/node-mkdirp/issues' },
+335 silly resolved     homepage: 'https://github.com/substack/node-mkdirp',
+335 silly resolved     _id: 'mkdirp@0.3.5',
+335 silly resolved     dist: { shasum: '714ba4ca3946155e0a07db92488eeaac16a4d2c0' },
+335 silly resolved     _from: 'mkdirp@0.3.5',
+335 silly resolved     _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' } ]
+336 info install commander@1.3.2 into /usr/local/lib/node_modules/express-generator
+337 info install mkdirp@0.3.5 into /usr/local/lib/node_modules/express-generator
+338 info installOne commander@1.3.2
+339 info installOne mkdirp@0.3.5
+340 info /usr/local/lib/node_modules/express-generator/node_modules/commander unbuild
+341 info /usr/local/lib/node_modules/express-generator/node_modules/mkdirp unbuild
+342 verbose tar unpack /Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+343 silly lockFile 4e8cd737-generator-node-modules-commander tar:///usr/local/lib/node_modules/express-generator/node_modules/commander
+344 verbose lock tar:///usr/local/lib/node_modules/express-generator/node_modules/commander /Users/Jshiiba/.npm/4e8cd737-generator-node-modules-commander.lock
+345 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+346 verbose lock tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz /Users/Jshiiba/.npm/ad66b624--npm-commander-1-3-2-package-tgz.lock
+347 verbose tar unpack /Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+348 silly lockFile 0bdec806-ss-generator-node-modules-mkdirp tar:///usr/local/lib/node_modules/express-generator/node_modules/mkdirp
+349 verbose lock tar:///usr/local/lib/node_modules/express-generator/node_modules/mkdirp /Users/Jshiiba/.npm/0bdec806-ss-generator-node-modules-mkdirp.lock
+350 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+351 verbose lock tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz /Users/Jshiiba/.npm/68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz.lock
+352 silly gunzTarPerm modes [ '755', '644' ]
+353 silly gunzTarPerm extractEntry package.json
+354 silly gunzTarPerm modes [ '755', '644' ]
+355 silly gunzTarPerm extractEntry index.js
+356 silly gunzTarPerm extractEntry History.md
+357 silly gunzTarPerm extractEntry Readme.md
+358 silly gunzTarPerm extractEntry package.json
+359 silly gunzTarPerm extractEntry .npmignore
+360 silly gunzTarPerm extractEntry LICENSE
+361 silly gunzTarPerm extractEntry index.js
+362 silly gunzTarPerm extractEntry .travis.yml
+363 silly gunzTarPerm extractEntry examples/pow.js
+364 silly gunzTarPerm extractEntry readme.markdown
+365 silly gunzTarPerm extractEntry test/chmod.js
+366 silly gunzTarPerm extractEntry test/perm.js
+367 silly gunzTarPerm extractEntry test/perm_sync.js
+368 silly gunzTarPerm extractEntry test/race.js
+369 silly gunzTarPerm extractEntry test/mkdirp.js
+370 silly gunzTarPerm extractEntry test/return.js
+371 silly gunzTarPerm extractEntry test/return_sync.js
+372 silly gunzTarPerm extractEntry test/root.js
+373 silly gunzTarPerm extractEntry test/sync.js
+374 silly gunzTarPerm extractEntry test/umask.js
+375 silly gunzTarPerm extractEntry test/clobber.js
+376 silly gunzTarPerm extractEntry test/umask_sync.js
+377 silly gunzTarPerm extractEntry test/rel.js
+378 silly lockFile 0bdec806-ss-generator-node-modules-mkdirp tar:///usr/local/lib/node_modules/express-generator/node_modules/mkdirp
+379 silly lockFile 0bdec806-ss-generator-node-modules-mkdirp tar:///usr/local/lib/node_modules/express-generator/node_modules/mkdirp
+380 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+381 silly lockFile 68cf55ea-iba-npm-mkdirp-0-3-5-package-tgz tar:///Users/Jshiiba/.npm/mkdirp/0.3.5/package.tgz
+382 info preinstall mkdirp@0.3.5
+383 verbose readDependencies using package.json deps
+384 verbose readDependencies using package.json deps
+385 silly resolved []
+386 verbose about to build /usr/local/lib/node_modules/express-generator/node_modules/mkdirp
+387 info build /usr/local/lib/node_modules/express-generator/node_modules/mkdirp
+388 verbose linkStuff [ true,
+388 verbose linkStuff   '/usr/local/lib/node_modules',
+388 verbose linkStuff   false,
+388 verbose linkStuff   '/usr/local/lib/node_modules/express-generator/node_modules' ]
+389 info linkStuff mkdirp@0.3.5
+390 silly lockFile 4e8cd737-generator-node-modules-commander tar:///usr/local/lib/node_modules/express-generator/node_modules/commander
+391 silly lockFile 4e8cd737-generator-node-modules-commander tar:///usr/local/lib/node_modules/express-generator/node_modules/commander
+392 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+393 silly lockFile ad66b624--npm-commander-1-3-2-package-tgz tar:///Users/Jshiiba/.npm/commander/1.3.2/package.tgz
+394 info preinstall commander@1.3.2
+395 verbose readDependencies using package.json deps
+396 verbose readDependencies using package.json deps
+397 verbose cache add [ 'keypress@0.1.x', null ]
+398 verbose cache add name=undefined spec="keypress@0.1.x" args=["keypress@0.1.x",null]
+399 verbose parsed url { protocol: null,
+399 verbose parsed url   slashes: null,
+399 verbose parsed url   auth: null,
+399 verbose parsed url   host: null,
+399 verbose parsed url   port: null,
+399 verbose parsed url   hostname: null,
+399 verbose parsed url   hash: null,
+399 verbose parsed url   search: null,
+399 verbose parsed url   query: null,
+399 verbose parsed url   pathname: 'keypress@0.1.x',
+399 verbose parsed url   path: 'keypress@0.1.x',
+399 verbose parsed url   href: 'keypress@0.1.x' }
+400 verbose cache add name="keypress" spec="0.1.x" args=["keypress","0.1.x"]
+401 verbose parsed url { protocol: null,
+401 verbose parsed url   slashes: null,
+401 verbose parsed url   auth: null,
+401 verbose parsed url   host: null,
+401 verbose parsed url   port: null,
+401 verbose parsed url   hostname: null,
+401 verbose parsed url   hash: null,
+401 verbose parsed url   search: null,
+401 verbose parsed url   query: null,
+401 verbose parsed url   pathname: '0.1.x',
+401 verbose parsed url   path: '0.1.x',
+401 verbose parsed url   href: '0.1.x' }
+402 verbose addNamed [ 'keypress', '0.1.x' ]
+403 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+404 silly lockFile a3a73622-keypress-0-1-x keypress@0.1.x
+405 verbose lock keypress@0.1.x /Users/Jshiiba/.npm/a3a73622-keypress-0-1-x.lock
+406 silly addNameRange { name: 'keypress', range: '>=0.1.0-0 <0.2.0-0', hasData: false }
+407 verbose url raw keypress
+408 verbose url resolving [ 'https://registry.npmjs.org/', './keypress' ]
+409 verbose url resolved https://registry.npmjs.org/keypress
+410 info trying registry request attempt 1 at 12:55:18
+411 verbose etag "DJTBLT34PPGGJ2E4M7UCDYHM1"
+412 http GET https://registry.npmjs.org/keypress
+413 verbose linkBins mkdirp@0.3.5
+414 verbose linkMans mkdirp@0.3.5
+415 verbose rebuildBundles mkdirp@0.3.5
+416 info install mkdirp@0.3.5
+417 info postinstall mkdirp@0.3.5
+418 http 200 https://registry.npmjs.org/keypress
+419 silly registry.get cb [ 200,
+419 silly registry.get   { date: 'Mon, 28 Apr 2014 16:55:19 GMT',
+419 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+419 silly registry.get     etag: '"B59J1BIMKJ6UW35JT8YJCCQK8"',
+419 silly registry.get     'content-type': 'application/json',
+419 silly registry.get     via: '1.1 varnish',
+419 silly registry.get     'cache-control': 'max-age=1',
+419 silly registry.get     'content-length': '22496',
+419 silly registry.get     'accept-ranges': 'bytes',
+419 silly registry.get     age: '149',
+419 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-at50-ATL',
+419 silly registry.get     'x-cache': 'HIT, HIT',
+419 silly registry.get     'x-cache-hits': '1, 1',
+419 silly registry.get     'x-timer': 'S1398593696.086064100,VS0,VS8,VE9,VE110422940',
+419 silly registry.get     vary: 'Accept',
+419 silly registry.get     'keep-alive': 'timeout=10, max=50',
+419 silly registry.get     connection: 'Keep-Alive' } ]
+420 silly addNameRange number 2 { name: 'keypress', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+421 silly addNameRange versions [ 'keypress', [ '0.0.1', '0.0.2', '0.1.0', '0.2.0', '0.2.1' ] ]
+422 verbose addNamed [ 'keypress', '0.1.0' ]
+423 verbose addNamed [ '0.1.0', '0.1.0' ]
+424 silly lockFile 22598b8c-keypress-0-1-0 keypress@0.1.0
+425 verbose lock keypress@0.1.0 /Users/Jshiiba/.npm/22598b8c-keypress-0-1-0.lock
+426 silly lockFile 22598b8c-keypress-0-1-0 keypress@0.1.0
+427 silly lockFile 22598b8c-keypress-0-1-0 keypress@0.1.0
+428 silly lockFile a3a73622-keypress-0-1-x keypress@0.1.x
+429 silly lockFile a3a73622-keypress-0-1-x keypress@0.1.x
+430 silly resolved [ { name: 'keypress',
+430 silly resolved     version: '0.1.0',
+430 silly resolved     description: 'Make any Node ReadableStream emit "keypress" events',
+430 silly resolved     author:
+430 silly resolved      { name: 'Nathan Rajlich',
+430 silly resolved        email: 'nathan@tootallnate.net',
+430 silly resolved        url: 'http://tootallnate.net' },
+430 silly resolved     main: 'index.js',
+430 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+430 silly resolved     repository:
+430 silly resolved      { type: 'git',
+430 silly resolved        url: 'git://github.com/TooTallNate/keypress.git' },
+430 silly resolved     keywords: [ 'keypress', 'readline', 'core' ],
+430 silly resolved     license: 'MIT',
+430 silly resolved     readme: 'keypress\n========\n### Make any Node ReadableStream emit "keypress" events\n\n\nPrevious to Node `v0.8.x`, there was an undocumented `"keypress"` event that\n`process.stdin` would emit when it was a TTY. Some people discovered this hidden\ngem, and started using it in their own code.\n\nNow in Node `v0.8.x`, this `"keypress"` event does not get emitted by default,\nbut rather only when it is being used in conjuction with the `readline` (or by\nextension, the `repl`) module.\n\nThis module is the exact logic from the node `v0.8.x` releases ripped out into its\nown module.\n\n__Bonus:__ Now with mouse support!\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install keypress\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n#### Listening for "keypress" events\n\n``` js\nvar keypress = require(\'keypress\');\n\n// make `process.stdin` begin emitting "keypress" events\nkeypress(process.stdin);\n\n// listen for the "keypress" event\nprocess.stdin.on(\'keypress\', function (ch, key) {\n  console.log(\'got "keypress"\', key);\n  if (key && key.ctrl && key.name == \'c\') {\n    process.stdin.pause();\n  }\n});\n\nprocess.stdin.setRawMode(true);\nprocess.stdin.resume();\n```\n\n#### Listening for "mousepress" events\n\n``` js\nvar keypress = require(\'keypress\');\n\n// make `process.stdin` begin emitting "mousepress" (and "keypress") events\nkeypress(process.stdin);\n\n// you must enable the mouse events before they will begin firing\nkeypress.enableMouse(process.stdout);\n\nprocess.stdin.on(\'mousepress\', function (info) {\n  console.log(\'got "mousepress" event at %d x %d\', info.x, info.y);\n});\n\nprocess.on(\'exit\', function () {\n  // disable mouse on exit, so that the state\n  // is back to normal for the terminal\n  keypress.disableMouse(process.stdout);\n});\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+430 silly resolved     readmeFilename: 'README.md',
+430 silly resolved     bugs: { url: 'https://github.com/TooTallNate/keypress/issues' },
+430 silly resolved     homepage: 'https://github.com/TooTallNate/keypress',
+430 silly resolved     _id: 'keypress@0.1.0',
+430 silly resolved     _from: 'keypress@0.1.x' } ]
+431 info install keypress@0.1.0 into /usr/local/lib/node_modules/express-generator/node_modules/commander
+432 info installOne keypress@0.1.0
+433 info /usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress unbuild
+434 verbose tar unpack /Users/Jshiiba/.npm/keypress/0.1.0/package.tgz
+435 silly lockFile a7c9bd34--commander-node-modules-keypress tar:///usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress
+436 verbose lock tar:///usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress /Users/Jshiiba/.npm/a7c9bd34--commander-node-modules-keypress.lock
+437 silly lockFile 029caed5-a-npm-keypress-0-1-0-package-tgz tar:///Users/Jshiiba/.npm/keypress/0.1.0/package.tgz
+438 verbose lock tar:///Users/Jshiiba/.npm/keypress/0.1.0/package.tgz /Users/Jshiiba/.npm/029caed5-a-npm-keypress-0-1-0-package-tgz.lock
+439 silly gunzTarPerm modes [ '755', '644' ]
+440 silly gunzTarPerm extractEntry package.json
+441 silly gunzTarPerm extractEntry README.md
+442 silly gunzTarPerm extractEntry index.js
+443 silly gunzTarPerm extractEntry test.js
+444 silly lockFile a7c9bd34--commander-node-modules-keypress tar:///usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress
+445 silly lockFile a7c9bd34--commander-node-modules-keypress tar:///usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress
+446 silly lockFile 029caed5-a-npm-keypress-0-1-0-package-tgz tar:///Users/Jshiiba/.npm/keypress/0.1.0/package.tgz
+447 silly lockFile 029caed5-a-npm-keypress-0-1-0-package-tgz tar:///Users/Jshiiba/.npm/keypress/0.1.0/package.tgz
+448 info preinstall keypress@0.1.0
+449 verbose readDependencies using package.json deps
+450 verbose readDependencies using package.json deps
+451 silly resolved []
+452 verbose about to build /usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress
+453 info build /usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules/keypress
+454 verbose linkStuff [ true,
+454 verbose linkStuff   '/usr/local/lib/node_modules',
+454 verbose linkStuff   false,
+454 verbose linkStuff   '/usr/local/lib/node_modules/express-generator/node_modules/commander/node_modules' ]
+455 info linkStuff keypress@0.1.0
+456 verbose linkBins keypress@0.1.0
+457 verbose linkMans keypress@0.1.0
+458 verbose rebuildBundles keypress@0.1.0
+459 info install keypress@0.1.0
+460 info postinstall keypress@0.1.0
+461 verbose about to build /usr/local/lib/node_modules/express-generator/node_modules/commander
+462 info build /usr/local/lib/node_modules/express-generator/node_modules/commander
+463 verbose linkStuff [ true,
+463 verbose linkStuff   '/usr/local/lib/node_modules',
+463 verbose linkStuff   false,
+463 verbose linkStuff   '/usr/local/lib/node_modules/express-generator/node_modules' ]
+464 info linkStuff commander@1.3.2
+465 verbose linkBins commander@1.3.2
+466 verbose linkMans commander@1.3.2
+467 verbose rebuildBundles commander@1.3.2
+468 verbose rebuildBundles [ 'keypress' ]
+469 info install commander@1.3.2
+470 info postinstall commander@1.3.2
+471 verbose about to build /usr/local/lib/node_modules/express-generator
+472 info build /usr/local/lib/node_modules/express-generator
+473 verbose linkStuff [ true,
+473 verbose linkStuff   '/usr/local/lib/node_modules',
+473 verbose linkStuff   true,
+473 verbose linkStuff   '/usr/local/lib/node_modules' ]
+474 info linkStuff express-generator@4.0.0
+475 verbose linkBins express-generator@4.0.0
+476 verbose link bins [ { express: './bin/express' }, '/usr/local/bin', true ]
+477 verbose linkMans express-generator@4.0.0
+478 verbose rebuildBundles express-generator@4.0.0
+479 verbose rebuildBundles [ 'commander', 'mkdirp' ]
+480 info /usr/local/lib/node_modules/express-generator unbuild
+481 info preuninstall express-generator@4.0.0
+482 info uninstall express-generator@4.0.0
+483 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild express-generator@4.0.0
+484 verbose /usr/local/bin,[object Object] binRoot
+485 error error rolling back Error: Refusing to delete: /usr/local/bin/express not in /usr/local/lib/node_modules/express-generator
+485 error error rolling back     at clobberFail (/usr/local/lib/node_modules/npm/lib/utils/gently-rm.js:57:12)
+485 error error rolling back     at next (/usr/local/lib/node_modules/npm/lib/utils/gently-rm.js:43:14)
+485 error error rolling back     at /usr/local/lib/node_modules/npm/lib/utils/gently-rm.js:52:12
+485 error error rolling back     at Object.oncomplete (fs.js:107:15)
+485 error error rolling back  express-generator@4.0.0 { [Error: Refusing to delete: /usr/local/bin/express not in /usr/local/lib/node_modules/express-generator] code: 'EEXIST', path: '/usr/local/bin/express' }
+486 error Refusing to delete: /usr/local/bin/express not in /usr/local/lib/node_modules/express-generator
+File exists: /usr/local/bin/express
+Move it away, and try again.
+487 error System Darwin 11.4.2
+488 error command "node" "/usr/local/bin/npm" "install" "-g" "express-generator"
+489 error cwd /Users/Jshiiba/programming/comp20-s2014-team22/comp20-s2014-team22
+490 error node -v v0.10.26
+491 error npm -v 1.4.6
+492 error path /usr/local/bin/express
+493 error code EEXIST
+494 verbose exit [ 1, true ]

@@ -12,6 +12,7 @@
 			pw= document.getElementById("pw").value;
 			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
 				alert('You logged in!');
+				//$.post("http://aqueous-crag-6650.herokuapp.com/login", {"username":user, "password":pw});
 				document.getElementById("user").value = "";
 				document.getElementById("pw").value = "";
 			}

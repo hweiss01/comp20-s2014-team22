@@ -33,10 +33,12 @@ app.use(app.router); //needed for retrieving data from jQuery post
 
 var mongo = require('mongodb');
 
+//MongoDB Setup
 var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/myDatabase';
 
+//connect to Mongo globally
 var db = mongo.Db.connect(mongoUri, function (err, database) {
   db = database;
 });
@@ -61,6 +63,55 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+
+/*
+NEW COLLECTION for each USER
+COLLECTION = WILL
+
+DOCUMENT: JSON object; contains arrays of tuples
+
+WILL
+  {date:1/1/11, items:[[d,w,p], [d,w,p]]}
+  {[d,w,p]}
+  {[d,w,p], [d,w,p], [d,w,p], [d,w,p]}
+*/
+
+
+// GET /retrieve
+app.get('/retrieve', function(req, res) {
+  var user = req.query.username; //from /retrieve?username=SOMEDATA
+  console.log(user);
+
+  db.collection(user, function(er, collection) {
+
+    //sort documents in <user> collection
+    collection.find().toArray(function (err, docs) {
+      var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
+
+      var output = []; //holds JSON objects
+
+      //find data for correct user
+      for (doc in purchaseData) {
+        for (item in purchaseData[doc]) {
+          output.push(purchaseData[doc][item]);
+        }
+      }
+
+      res.send(output); //[ [d,w,p], [d,w,p], ... ]
+    });
+  });
+});
+
+//Sorts JSON Array <sortThis> by <prop>, in asc/desc order
+//modified from Sean the Bean: http://stackoverflow.com/questions/881510/jquery-sorting-json-by-properties
+function sortResults(sortThis, prop, asc) {
+    sortThis = sortThis.sort(function(a, b) {
+        if (asc) return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+        else return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+    });
+    return sortThis;
+}
+
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

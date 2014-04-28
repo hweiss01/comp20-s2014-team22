@@ -6,13 +6,14 @@
 	<link rel = "stylesheet" href="login.css" type="text/css" />
 	<meta charset= 'utf-8'>
 	<script src="chart/Chart.js"></script>
+	<script> src = "//code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		function RunScript(){
 			user = document.getElementById("user").value;
 			pw= document.getElementById("pw").value;
 			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
 				alert('You logged in!');
-				$.post("http://aqueous-crag-6650.herokuapp.com/login.json", {"username":user, "password":pw});
+				$.post("http://pacific-caverns-6327.herokuapp.com/login.json", {"username":user, "password":pw});
 				document.getElementById("user").value = "";
 				document.getElementById("pw").value = "";
 			}

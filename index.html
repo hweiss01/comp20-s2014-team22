@@ -12,12 +12,12 @@
 			pw= document.getElementById("pw").value;
 			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
 				alert('You logged in!');
-				//$.post("http://aqueous-crag-6650.herokuapp.com/login", {"username":user, "password":pw});
+				$.post("http://aqueous-crag-6650.herokuapp.com/login.json", {"username":user, "password":pw});
 				document.getElementById("user").value = "";
 				document.getElementById("pw").value = "";
 			}
 			else {
-				alert('You did not log in');
+				alert('Incorrect Username or Password');
 				document.getElementById("user").value = "";
 				document.getElementById("pw").value = "";
 			}

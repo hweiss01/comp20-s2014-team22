@@ -6,16 +6,13 @@
 	<link rel = "stylesheet" href="login.css" type="text/css" />
 	<meta charset= 'utf-8'>
 	<script src="chart/Chart.js"></script>
-	<script> src = "//code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		function RunScript(){
 			user = document.getElementById("user").value;
 			pw= document.getElementById("pw").value;
 			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
-				alert('You logged in!');
-				$.post("http://pacific-caverns-6327.herokuapp.com/login.json", {"username":user, "password":pw});
-				document.getElementById("user").value = "";
-				document.getElementById("pw").value = "";
+				var uri = "http://pacific-caverns-6327.herokuapp.com/retrieve?username=" + user;
+				window.location.href = uri;
 			}
 			else {
 				alert('Incorrect Username or Password');
@@ -33,7 +30,7 @@
 <h1> SpendingRetriever </h1>
 
 <h3> Username <input type="text" id = "user" size="30"/></h3>
-<h3> Password <input type ="text" id="pw" size="30"/></h3>
+<h3> Password <input type ="password" id="pw" size="30"/></h3>
 <button onclick = "RunScript()"> Login</button>
 
 </body>

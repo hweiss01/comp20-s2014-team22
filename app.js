@@ -106,6 +106,28 @@ app.get('/retrieve', function(req, res) {
           ]});
 });
 
+
+// POST /submit.json
+app.post('/submit.json', function(req, res) {
+  var JSONstring = req.body["data"];
+  var buffer = JSON.parse(JSONstring);
+
+  //CLEAN THE BUFFER (SECURITY) !!!
+  
+  db.collection(buffer["user"], function(er, collection) {
+      for (key in buffer["purchases"]) {
+        if (collection.find({"confirmation":buffer["purchases"][key]["confirmation"]}) == null) { //confirmation is not in database
+          collection.insert({"date":buffer["purchases"][key]["date"], "items":buffer["purchases"][key]["items"]});
+          console.log("IM INSERTING A DOCUMENT");
+        }
+      }
+  });
+
+  res.send("Posted scores to database.");
+});
+
+
+
 //Sorts JSON Array <sortThis> by <prop>, in asc/desc order
 //modified from Sean the Bean: http://stackoverflow.com/questions/881510/jquery-sorting-json-by-properties
 function sortResults(sortThis, prop, asc) {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spending Retriever</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href="public/stylesheets/login.css" type="text/css" />
+	<meta charset= 'utf-8'>
+	<script>
+		function RunScript(){
+			user = document.getElementById("user").value;
+			pw= document.getElementById("pw").value;
+			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
+				var uri = "http://pacific-caverns-6327.herokuapp.com/retrieve?username=" + user;
+				window.location.href = uri;
+			}
+			else {
+				alert('Incorrect Username or Password');
+				document.getElementById("user").value = "";
+				document.getElementById("pw").value = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+<img src = "images/dog.png" alt="Logo" />
+<br/>
+<h1> SpendingRetriever </h1>
+
+<h3> Username <input type="text" id = "user" size="30"/></h3>
+<h3> Password <input type ="password" id="pw" size="30"/></h3>
+<button onclick = "RunScript()"> Login</button>
+
+</body>
+
+
+</html>
+

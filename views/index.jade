@@ -1,18 +1,1 @@
-extends layout
-
-block content
-	div.container
-		div.panel.panel-default
-			div.panel-heading Spending
-				table.table.table-striped.table-bordered
-					thead
-						tr
-							th Website
-							th Date
-							th Total
-					tbody
-						each item in purchases
-							tr
-								td= item.website
-								td= item.date
-								td= item.price
+include index.html

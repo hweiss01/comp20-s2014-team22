@@ -55,14 +55,16 @@ app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+var engines = require('consolidate');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', function(req, res){
-	res.render('index.html');
-});
+app.get('/', routes.index);
 
 app.get('/user', user.list);
 

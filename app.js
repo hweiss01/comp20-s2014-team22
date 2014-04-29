@@ -43,6 +43,12 @@ var db = mongo.Db.connect(mongoUri, function (err, database) {
 	db = database;
 });
 
+// db.insert({ 'purchases': [
+// 						{'website': 'Amazon', 'date': '4/1/14', 'price': '50'},
+// 						{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
+// 					], 'total': '$75'
+// 					});
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);

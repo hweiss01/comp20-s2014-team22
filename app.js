@@ -79,27 +79,31 @@ WILL
 
 // GET /retrieve
 app.get('/retrieve', function(req, res) {
-  var user = req.query.username; //from /retrieve?username=SOMEDATA
-  console.log(user);
+  // var user = req.query.username; //from /retrieve?username=SOMEDATA
+  // console.log(user);
 
-  db.collection(user, function(er, collection) {
+  // db.collection(user, function(er, collection) {
 
-    //sort documents in <user> collection
-    collection.find().toArray(function (err, docs) {
-      var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
+  //   //sort documents in <user> collection
+  //   collection.find().toArray(function (err, docs) {
+  //     var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
 
-      var output = []; //holds JSON objects
+  //     var output = []; //holds JSON objects
 
-      //find data for correct user
-      for (doc in purchaseData) {
-        for (item in purchaseData[doc]) {
-          output.push(purchaseData[doc][item]);
-        }
-      }
+  //     //find data for correct user
+  //     for (doc in purchaseData) {
+  //       for (item in purchaseData[doc]) {
+  //         output.push(purchaseData[doc][item]);
+  //       }
+  //     }
 
-      res.send(output); //[ [d,w,p], [d,w,p], ... ]
-    });
-  });
+  //     res.send(output); //[ [d,w,p], [d,w,p], ... ]
+  //   });
+  // });
+    res.render('retrieve', { 'purchases': [
+            {'website': 'Amazon', 'date': '4/1/14', 'price': '50'},
+            {'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
+          ]});
 });
 
 //Sorts JSON Array <sortThis> by <prop>, in asc/desc order
@@ -112,7 +116,6 @@ function sortResults(sortThis, prop, asc) {
     return sortThis;
 }
 
-app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

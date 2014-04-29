@@ -124,7 +124,8 @@ app.post('/submit.json', function(req, res) {
 	
 	db.collection(buffer["user"], function(er, collection) {
 			for (key in buffer["purchases"]) {
-				if (collection.find({"confirmation":buffer["purchases"][key]["confirmation"]}) == null) { //confirmation is not in database
+                var cursorStack = collection.find({"confirmation":buffer["purchases"][key]["confirmation"]})
+				if (cursorStack.hasNext() == false) { //confirmation is not in database
 					collection.insert({"date":buffer["purchases"][key]["date"], "items":buffer["purchases"][key]["items"]});
 					console.log("IM INSERTING A DOCUMENT");
 				}

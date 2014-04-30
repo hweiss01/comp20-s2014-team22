@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>Testing plots functions</title>
+<script src="../comp20-s2014-team22/public/javascripts/chart/Chart.js"></script>
+<script>
+function lala(){
+	Purchase = ['{"website":"Amazon", "date":"1/12/14", "price":50}', '{"website":"Ebay", "date":"1/13/14", "price":70}'];
+
+	labels = [];
+	data = [];
+
+	Purchase.map (function (str) {
+		datum = JSON.parse(str);
+		labels.push(datum.date);
+		data.push(datum.price);
+		console.log(labels);
+		console.log(data);
+	});
+
+	Runstuff(labels, data);
+
+	function Runstuff(labels1, data1){
+		console.log(labels1);
+		console.log(data1);
+		//will have to pass it maybea labels array and a data array
+		var ctx = document.getElementById("myChart").getContext("2d");
+
+		var myNewChart = new Chart(ctx);
+		var data = {
+		labels : labels1,
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : data1
+			}
+		]
+		}
+		new Chart(ctx).Line(data);
+	}
+
+}
+</script>
+</head>
+
+<body onload = "lala()">
+
+<canvas id = "myChart" width="400" height= "400"></canvas>
+</body>
+
+</html>
+
+
+ </body>
+</html>
+<html>
+

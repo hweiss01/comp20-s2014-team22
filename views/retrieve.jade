@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			.col-md-6
+				h1= 'Total Amount Spent: ' + total
+			.col-md-6
+				canvas.chart
+		div.panel.panel-default
+			div.panel-heading
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Website
+							th Date
+							th Total
+					tbody
+						each item in purchases
+							tr
+								td= item.website
+								td= item.date
+								td= item.price

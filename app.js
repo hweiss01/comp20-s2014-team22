@@ -36,7 +36,7 @@ var mongo = require('mongodb');
 //MongoDB Setup
 var mongoUri = process.env.MONGOLAB_URI ||
 	process.env.MONGOHQ_URL ||
-	'mongodb://localhost/4000';
+	'mongodb://localhost/sr';
 
 //connect to Mongo globally
 var db = mongo.Db.connect(mongoUri, function (err, database) {
@@ -124,56 +124,28 @@ app.post('/submit.json', function(req, res) {
 
   db.collection(buffer["user"], function(er, collection) {
       for (key in buffer["purchases"]) {
-        console.log("I found key #" + key + " in purchases!");
-        var currentConfirmation = buffer["purchases"][key]["confirmation"];
-        console.log("Let's check for confirmation " + currentConfirmation);
-
-        //STOP DUPLICATES... HOW?
-
-        //collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
-          //callback
-        //});
-
-        collection.find({"confirmation":currentConfirmation}).toArray(function(err, docs) {
-          var nextDocument = {"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]};
-          console.log("KEY = " + key);
-          console.log("DOCS = " + docs);
-          if(docs.length > 0) {
-            console.log("ALREADY EXISTS");
-            console.log("I want to insert: " + nextDocument["confirmation"]);
-          }
-          else {
-            console.log("DOES NOT YET EXIST");
-            console.log("I want to insert: " + nextDocument["confirmation"]);
-            collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
-                //callback
-            });
-          }
-        });
-
-        // var exists = collection.find({"confirmation":currentConfirmation}, function(err, document) {
-        //   //callback
-        // });
-        // if (exists) {
-        //   console.log("It's already here!");
-        // } 
-        // else { //confirmation is not already in database
-        //   console.log("It's a new document!");
-        //   collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
-        //     //callback
-        //   });
-        // }
-
-      // collection.ensureIndex({"confirmation":currentConfirmation}, {unique: true, dropDups: true}, function(err, document) {
-      //   //callback
-      // });
+        //var currentConfirmation = buffer["purchases"][key]["confirmation"];
+        var nextDocument = {"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]};
+        insertPurchase(nextDocument, buffer["user"]);
       }
   });
 
   res.send("Posted scores to database.");
 });
 
-
+//Inserts a document into the database if a duplicate <confirmation> key is not already in the database
+function insertPurchase(nextDocument, user) {
+  db.collection(user, function(er, collection) {
+    var currentConfirmation = nextDocument["confirmation"];
+    collection.find({"confirmation":currentConfirmation}).toArray(function(err, docs) {
+      if(docs.length == 0) {
+        collection.insert(nextDocument, function (err, res) {
+            //callback
+        });
+      }
+    });
+  });
+}
 
 //Sorts JSON Array <sortThis> by <prop>, in asc/desc order
 //modified from Sean the Bean: http://stackoverflow.com/questions/881510/jquery-sorting-json-by-properties

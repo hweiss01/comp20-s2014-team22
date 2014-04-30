@@ -3,10 +3,15 @@ extends layout
 block content
 	div.container
 		div.row
-			.col-md-6
+			.col-xs-6
 				h1= 'Total Amount Spent: ' + total
-			.col-md-6
-				canvas.chart
+			.col-xs-6
+				canvas#chart
+				script.
+					$(document).ready(function(){
+					console.log(document.getElementById("web"));
+					hello();
+					});
 		div.panel.panel-default
 			div.panel-heading
 				table.table.table-striped.table-bordered
@@ -18,6 +23,7 @@ block content
 					tbody
 						each item in purchases
 							tr
-								td= item.website
-								td= item.date
-								td= item.price
+								td#web= item.website
+								td#date= item.date
+								td#price= item.price
+					

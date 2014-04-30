@@ -2,17 +2,20 @@ extends layout
 
 block content
 	script(type='text/javascript').
-	div.container
+	div.container-fluid
 		div.row
-			.col-xs-6
-				h1= 'Total Amount Spent: ' + total
-			.col-xs-6
-				canvas#chart
-				script.
-					$(document).ready(function(){
-					console.log(document.getElementById("web"));
-					hello();
-					});
+			.clearfix.visible-xs
+			.col-ms-6.col-sm-6
+				.text-center
+					h1.text-center= 'Total Amount Spent: ' + total
+			.col-ms-6.col-sm-6
+				.text-center
+					canvas#chart
+					script.
+						$(document).ready(function(){
+						console.log(document.getElementById("web"));
+						hello();
+						});
 		div.panel.panel-default
 			div.panel-heading
 				table.table.table-striped.table-bordered

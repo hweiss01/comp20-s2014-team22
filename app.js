@@ -36,7 +36,7 @@ var mongo = require('mongodb');
 //MongoDB Setup
 var mongoUri = process.env.MONGOLAB_URI ||
 	process.env.MONGOHQ_URL ||
-	'mongodb://localhost/myDatabase';
+	'mongodb://localhost/4000';
 
 //connect to Mongo globally
 var db = mongo.Db.connect(mongoUri, function (err, database) {
@@ -117,22 +117,60 @@ app.get('/retrieve', function(req, res) {
 
 // POST /submit.json
 app.post('/submit.json', function(req, res) {
-	var JSONstring = req.body["data"];
-	var buffer = JSON.parse(JSONstring);
+  var JSONstring = req.body["data"];
+  var buffer = JSON.parse(JSONstring);
 
-	//CLEAN THE BUFFER (SECURITY) !!!
-	
-	db.collection(buffer["user"], function(er, collection) {
-			for (key in buffer["purchases"]) {
-                var cursorStack = collection.find({"confirmation":buffer["purchases"][key]["confirmation"]})
-				if (cursorStack.hasNext() == false) { //confirmation is not in database
-					collection.insert({"date":buffer["purchases"][key]["date"], "items":buffer["purchases"][key]["items"]});
-					console.log("IM INSERTING A DOCUMENT");
-				}
-			}
-	});
+  //CLEAN THE BUFFER (SECURITY) !!!
 
-	res.send("Posted scores to database.");
+  db.collection(buffer["user"], function(er, collection) {
+      for (key in buffer["purchases"]) {
+        console.log("I found key #" + key + " in purchases!");
+        var currentConfirmation = buffer["purchases"][key]["confirmation"];
+        console.log("Let's check for confirmation " + currentConfirmation);
+
+        //STOP DUPLICATES... HOW?
+
+        //collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
+          //callback
+        //});
+
+        collection.find({"confirmation":currentConfirmation}).toArray(function(err, docs) {
+          var nextDocument = {"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]};
+          console.log("KEY = " + key);
+          console.log("DOCS = " + docs);
+          if(docs.length > 0) {
+            console.log("ALREADY EXISTS");
+            console.log("I want to insert: " + nextDocument["confirmation"]);
+          }
+          else {
+            console.log("DOES NOT YET EXIST");
+            console.log("I want to insert: " + nextDocument["confirmation"]);
+            collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
+                //callback
+            });
+          }
+        });
+
+        // var exists = collection.find({"confirmation":currentConfirmation}, function(err, document) {
+        //   //callback
+        // });
+        // if (exists) {
+        //   console.log("It's already here!");
+        // } 
+        // else { //confirmation is not already in database
+        //   console.log("It's a new document!");
+        //   collection.insert({"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]}, function (err, res) {
+        //     //callback
+        //   });
+        // }
+
+      // collection.ensureIndex({"confirmation":currentConfirmation}, {unique: true, dropDups: true}, function(err, document) {
+      //   //callback
+      // });
+      }
+  });
+
+  res.send("Posted scores to database.");
 });
 
 

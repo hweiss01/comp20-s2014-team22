@@ -3,11 +3,11 @@ extends layout
 block content
 	script(type='text/javascript').
 	div.container
-		.clear
-			.right
-				canvas.chart
-			.left
+		div.row
+			.col-md-6
 				h1= 'Total Amount Spent: ' + total
+			.col-md-6
+				canvas.chart
 		div.panel.panel-default
 			div.panel-heading
 				table.table.table-striped.table-bordered

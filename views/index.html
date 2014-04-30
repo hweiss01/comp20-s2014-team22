@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>Spending Retriever</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel = "stylesheet" href="../stylesheets/login.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<meta charset= 'utf-8'>
 	<script>
 		function RunScript(){
@@ -24,14 +25,35 @@
 
 <body>
 
-<img src = "../images/dog.png" alt="Logo" />
-<br/>
-<h1> SpendingRetriever</h1>
+<div class="container-fluid">
 
-<h3> Username <input type="text" id = "user" size="30"/></h3>
-<h3> Password <input type ="password" id="pw" size="30"/></h3>
-<button onclick = "RunScript()"> Login</button>
+	<div class="rows">
+		<div class="col-md-6 col-md-offset-3">
+		<img src = "../images/dog.png" alt="Logo" width="350" />
+		<br/>
+		<h1> SpendingRetriever</h1>
 
+
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<label for="inputUsername" class="col-sm-2 control-label">Username</label>
+				<div class="col-sm-10">
+					<input type="username" class="form-control" placeholder="Enter Username">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" placeholder="Enter Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-lg btn-primary" onclick="RunScript()">Login</button>
+				</div>
+		</form>	
+	</div>
+</div>
 </body>
 
 

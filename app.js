@@ -85,35 +85,40 @@ WILL
 
 // GET /retrieve
 app.get('/retrieve', function(req, res) {
-	// var user = req.query.username; //from /retrieve?username=SOMEDATA
-	// console.log(user);
+	// var total = '$75'
+	// 	res.render('retrieve', { 'purchases': [
+	// 					{'website': 'Amazon', 'date': '4/1/14', 'price': '50'},
+	// 					{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
+	// 				], 'total': total
+	// 				});
 
-	// db.collection(user, function(er, collection) {
+  var user = "brian"; // CHANGE THIS!
 
-	//   //sort documents in <user> collection
-	//   collection.find().toArray(function (err, docs) {
-	//     var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
+  db.collection(user, function(er, collection) {
 
-	//     var output = []; //holds JSON objects
+    //sort documents in <user> collection
+    collection.find().toArray(function (err, docs) {
+      var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
 
-	//     //find data for correct user
-	//     for (doc in purchaseData) {
-	//       for (item in purchaseData[doc]) {
-	//         output.push(purchaseData[doc][item]);
-	//       }
-	//     }
+      // IS THIS ACTUALLY CAPABLE OF SORTING DATES? TRY WITH DIFFERENT MONTHS.
 
-	//     res.send(output); //[ [d,w,p], [d,w,p], ... ]
-	//   });
-	// });
-	var total = '$75'
-		res.render('retrieve', { 'purchases': [
-						{'website': 'Amazon', 'date': '4/1/14', 'price': '50'},
-						{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
-					], 'total': total
-					});
+      var output = []; //holds JSON objects
+      var total = 0.00;
+
+      //find data for correct user
+       for (doc in purchaseData) {
+         for (item in purchaseData[doc]["items"]) {
+           output.push(purchaseData[doc]["items"][item]);
+           total = total + parseFloat(purchaseData[doc]["items"][item]["price"]);
+         }
+       }
+
+      output = '{ "purchases": ' + JSON.stringify(output) + ', "total": ' + parseFloat(total).toFixed(2) + '}';
+      var userReceipts = JSON.parse(output);
+      res.send('retrieve', userReceipts);
+    });
+  });
 });
-
 
 // POST /submit.json
 app.post('/submit.json', function(req, res) {

@@ -115,7 +115,7 @@ app.get('/retrieve', function(req, res) {
 
       output = '{ "purchases": ' + JSON.stringify(output) + ', "total": ' + parseFloat(total).toFixed(2) + '}';
       var userReceipts = JSON.parse(output);
-      res.send('retrieve', userReceipts);
+      res.render('retrieve', userReceipts);
     });
   });
 });

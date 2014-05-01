@@ -7,7 +7,7 @@ block content
 			.clearfix.visible-xs
 			.col-ms-6.col-sm-6
 				.text-center
-					h1.text-center= 'Total Amount Spent: ' + total
+					h1.text-center#totes= 'Total Amount Spent: $' + total
 			.col-ms-6.col-sm-6
 				.text-center
 					canvas#chart
@@ -33,7 +33,13 @@ block content
 	div#tweet
 		script.
 			var link = "https://twitter.com/share";
-			var value = "$100";
+			var temp = document.getElementById("totes").innerHTML;
+			var length = temp.length;
+			var value = "";
+			for(var i = 20; i < length; i++){
+				value = value + temp[i];
+			}
+			console.log(value);
 			$('<a href="'+link+'" class="twitter-share-button" data-url="http://pacific-caverns-6327.herokuapp.com/" data-lang="en" data-text="I just tracked ' + value + ' of my spending this month using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
 			$('head').append('<meta name="description" content="I just tracked ' + value + ' of my spending this month using SpendingRetriever!" />');
 	div(class="g-plus", data-action="share")

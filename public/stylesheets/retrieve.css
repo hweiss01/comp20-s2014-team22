@@ -1,6 +1,6 @@
 #chart {
 	margin: 0 auto;
-	width: 100%;
+	width: 100% !important;
 	max-width:300px;
 	height: auto !important;
 }
@@ -24,8 +24,8 @@ ul.nav.navbar-nav li.active a.act {
 
 @media only screen and (max-width:400px){
     #chart {
-        width: 180px;
-        height: 90px;
+        width: 180px !important;
+        height: auto !important;
         margin: 0 auto;
     }
 }

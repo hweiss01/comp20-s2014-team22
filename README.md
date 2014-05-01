@@ -28,9 +28,11 @@ When the user first visits the website, they are prompted to create an account. 
 ### List of features to implement(including the "Pick 5": 
     *Data / screen scraping
     *Reporting with charts and graphs
-    *Send/receive emails
+    *local storage
     *Server-side data persistence (e.g. MongoDB)
     *Front-end framework (Bootstrap)
+    *Google plus API
+    *Twitter API
     
 ###What data will your prototype be using and collecting: ### 
     *Parsed data from emails

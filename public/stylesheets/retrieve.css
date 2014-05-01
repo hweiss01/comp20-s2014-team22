@@ -21,3 +21,10 @@ ul.nav.navbar-nav li.active a.act {
 	background-color: #a1ddef;
 	color: white;
 }
+
+@media only screen and (min-width:300px){
+    canvas#chart {
+        width: 150px;
+        margin: 0 auto;
+    }
+}

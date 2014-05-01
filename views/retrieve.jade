@@ -39,7 +39,9 @@ block content
 			for(var i = 20; i < length; i++){
 				value = value + temp[i];
 			}
-			console.log(value);
+			
 			$('<a href="'+link+'" class="twitter-share-button" data-url="http://pacific-caverns-6327.herokuapp.com/" data-lang="en" data-text="I just tracked ' + value + ' of my spending this month using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
-			$('head').append('<meta name="description" content="I just tracked ' + value + ' of my spending this month using SpendingRetriever!" />');
+
+			$('head').append('<meta name="image" content="../../public/images/dog.png" />');
+
 	div(class="g-plus", data-action="share")

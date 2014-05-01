@@ -1,16 +1,22 @@
-.clear:before,
-.clear:after {
-    content: " ";
-    display: table;
-}
-
-.clear:after {
-    clear: both;
-}
-
 #chart {
 	margin: 0 auto;
 	width: 1000px;
 	height: 1000px;
 
+}
+
+.bar {
+	background-color: #5bc0de;
+}
+
+a.navbar-brand.bar-brand {
+	color: white;
+}
+
+ul.nav.navbar-nav li a {
+	color: white;
+}
+
+ul.nav.navbar-nav li.active a.act {
+	background-color: #a1ddef;
 }

@@ -47,8 +47,8 @@ function hello(){
 				labels : labels,
 				datasets : [
 					{
-						fillColor : "rgba(220,220,220,0.5)",
-						strokeColor : "rgba(220,220,220,1)",
+						fillColor : "rgba(223,159,43,0.5)",
+						strokeColor : "rgba(223,159,43,1)",
 						pointColor : "rgba(220,220,220,1)",
 						pointStrokeColor : "#fff",
 						data : data1

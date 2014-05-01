@@ -36,11 +36,21 @@ block content
 			var temp = document.getElementById("totes").innerHTML;
 			var length = temp.length;
 			var value = "";
+
 			for(var i = 20; i < length; i++){
 				value = value + temp[i];
 			}
+		
+			if(value=="$0"){
+				$('<a href="'+link+'" class="twitter-share-button" data-url="http://tiny.cc/comp20" data-lang="en" data-text="I just got started using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
+			}
+
+			else {
+				$('<a href="'+link+'" class="twitter-share-button" data-url="http://tiny.cc/comp20" data-lang="en" data-text="I have tracked ' + value + ' of my spending using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
+			}
+
+
 			
-			$('<a href="'+link+'" class="twitter-share-button" data-url="http://tiny.cc/comp20" data-lang="en" data-text="I have tracked ' + value + ' of my spending using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
 
 			$('head').append('<link rel="image_src" href="images/dog.png" />');
 	div#google

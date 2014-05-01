@@ -19,4 +19,5 @@ ul.nav.navbar-nav li a {
 
 ul.nav.navbar-nav li.active a.act {
 	background-color: #a1ddef;
+	color: white;
 }

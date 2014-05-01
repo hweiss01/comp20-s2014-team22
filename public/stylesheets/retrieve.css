@@ -24,7 +24,7 @@ ul.nav.navbar-nav li.active a.act {
 
 @media only screen and (max-width:400px){
     #chart {
-        width: 180px !important;
+        width: 250px !important;
         height: auto !important;
         margin: 0 auto;
     }

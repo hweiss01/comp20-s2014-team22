@@ -37,6 +37,9 @@ function hello(){
 
 				}
 
+				labels.reverse();
+				data1.reverse();
+
 			
 
 			var myNewChart = new Chart(context);

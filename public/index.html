@@ -10,15 +10,18 @@
 		function RunScript(){
 			user = document.getElementById("user").value;
 			pw= document.getElementById("pw").value;
-			if(user!=undefined && pw!=undefined && user!="" && pw!="") {
+
+			//if(user!=undefined && pw!=undefined && user!="" && pw!="") {
+				console.log("here I am bitch");
 				var uri = "http://pacific-caverns-6327.herokuapp.com/retrieve?username=" + user;
-				window.location.href = uri;
-			}
-			else {
+				alert(uri);
+				//window.location.href = uri;
+			//}
+			//else {
 				alert('Incorrect Username or Password');
 				document.getElementById("user").value = "";
 				document.getElementById("pw").value = "";
-			}
+			//}
 		}
 	</script>
 </head>

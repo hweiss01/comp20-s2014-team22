@@ -91,17 +91,18 @@ app.get('/retrieve', function(req, res) {
 	// 					{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
 	// 				], 'total': total
 	// 				});
-
-  var user = "brian"; // CHANGE THIS!
+  var username = "no name";
+  var user = username = req.query["username"];
+  console.log("ABOUT TO GET USERNAME");
+  //username = req.query["username"];
+  //var tempname = JSON.parse(username);
+  console.log(user);
 
   db.collection(user, function(er, collection) {
 
     //sort documents in <user> collection
     collection.find().toArray(function (err, docs) {
       var purchaseData = sortResults(docs, "date", false); //possible fields: data, website, price
-
-      // IS THIS ACTUALLY CAPABLE OF SORTING DATES? TRY WITH DIFFERENT MONTHS.
-
       var output = []; //holds JSON objects
       var total = 0.00;
 
@@ -123,20 +124,43 @@ app.get('/retrieve', function(req, res) {
 // POST /submit.json
 app.post('/submit.json', function(req, res) {
   var JSONstring = req.body["data"];
+  JSONstring = JSONstring.replace(/&/g, '').replace(/</g, '').replace(/>/g, ''); //sanitize for security
   var buffer = JSON.parse(JSONstring);
-
-  //CLEAN THE BUFFER (SECURITY) !!!
 
   db.collection(buffer["user"], function(er, collection) {
       for (key in buffer["purchases"]) {
-        //var currentConfirmation = buffer["purchases"][key]["confirmation"];
-        var nextDocument = {"date":buffer["purchases"][key]["date"], "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]};
+        var sortableDate = reorderDate(buffer["purchases"][key]["date"]);
+        var nextDocument = {"date":sortableDate, "confirmation":buffer["purchases"][key]["confirmation"], "items":buffer["purchases"][key]["items"]};
         insertPurchase(nextDocument, buffer["user"]);
       }
   });
 
   res.send("Posted scores to database.");
 });
+
+//Takes in a date string "mm/dd/yyyy" and returns int yyyymmdd
+//Allows dates to easily be sorted
+function reorderDate(oldDate) {
+  var dateArray = oldDate.split("/");
+  var year = dateArray[2];
+  var month = "";
+  if (parseInt(dateArray[0]) < 10) {
+    month = "0" + dateArray[0];
+  }
+  else {
+    month = dateArray[0];
+  }
+  var day = "";
+  if (parseInt(dateArray[1]) < 10) {
+    day = "0" + dateArray[1];
+  }
+  else {
+    day = dateArray[1];
+  }
+
+  var newDate = year + month + day;
+  return parseInt(newDate);
+}
 
 //Inserts a document into the database if a duplicate <confirmation> key is not already in the database
 function insertPurchase(nextDocument, user) {

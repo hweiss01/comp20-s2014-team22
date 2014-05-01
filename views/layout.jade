@@ -10,6 +10,8 @@ html
   script(src='bootstrap/js/bootstrap.min.js')
   script(src='javascripts/chart/Chart.js')
   script(src='javascripts/retrieve.js')
+  script(src='javascripts/twitter.js')
+  script(src='https://apis.google.com/js/plusone.js')
   body
     nav.navbar.navbar-default.navbar-collapse(role=navigation)
         .container-fluid
@@ -23,4 +25,6 @@ html
                         a(href="#") History
                     li
                         a(href="#") My Account
+                    li
+                        a(href="/") Log Out
     block content

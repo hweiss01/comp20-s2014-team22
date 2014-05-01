@@ -18,7 +18,7 @@ block content
 						});
 		div.panel.panel-default
 			div.panel-heading
-				table.table.table-striped.table-bordered
+				table.table.table-striped.table-bordered#table
 					thead
 						tr
 							th Website
@@ -31,3 +31,9 @@ block content
 								td#date= item.date
 								td#price= item.price
 					
+	div#tweet
+		script.
+			var link = "https://twitter.com/share";
+			var value = "$100";
+			$('<a href="'+link+'" class="twitter-share-button" data-url="http://pacific-caverns-6327.herokuapp.com/" data-lang="en" data-text="I just tracked ' + value + ' of my spending this month using SpendingRetriever!">Tweet</a>').appendTo($('#tweet'));
+	div(class="g-plus", data-action="share")

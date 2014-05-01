@@ -23,7 +23,7 @@ ul.nav.navbar-nav li.active a.act {
 }
 
 #tweet, #google  {
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 @media only screen and (max-width:400px){

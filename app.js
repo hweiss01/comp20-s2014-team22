@@ -91,8 +91,9 @@ app.get('/retrieve', function(req, res) {
 	// 					{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
 	// 				], 'total': total
 	// 				});
-
-  var user = "brian"; // CHANGE THIS!
+  
+  var user = req.query["username"];//user get the login name from the login page
+  
 
   db.collection(user, function(er, collection) {
 

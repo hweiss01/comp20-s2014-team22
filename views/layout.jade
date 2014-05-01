@@ -2,7 +2,7 @@ doctype html
 html
   head
   title= 'SpendingRetriever'
-  meta(name="viewport", content="width=device-width, initial-scale=1", user-scalable="no")
+  meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
   link(rel='stylesheet', href='bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet', href='bootstrap/css/bootstrap-responsive.min.css')
   script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
@@ -28,8 +28,13 @@ html
     nav.navbar.navbar-default.navbar-collapse.bar(role=navigation)
         .container-fluid
             .navbar-header
+                button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navigation-bar")
+                    span.sr-only Toggle Navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
                 a(href="#").navbar-brand.bar-brand SpendingRetriever
-            .collapse.navbar-collapse
+            #navigation-bar.collapse.navbar-collapse
                 ul.nav.navbar-nav
                     li.active
                         a(href="#").act Overview

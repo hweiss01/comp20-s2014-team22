@@ -2,8 +2,7 @@
 function hello(){
 
 	var ctx = document.getElementById("chart");
-	console.log(table);
-	//console.log(document.getElementById("price").innerHTML);
+
 	if(!ctx)
 		{console.log('Canvas not found.');}
 	else{ 

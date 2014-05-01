@@ -22,11 +22,7 @@ ul.nav.navbar-nav li.active a.act {
 	color: white;
 }
 
-#___plus_0 {
-	margin-left: 20px;
-}
-
-#tweet  {
+#tweet, #google  {
 	margin-left: 20px;
 }
 

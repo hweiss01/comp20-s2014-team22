@@ -22,6 +22,14 @@ ul.nav.navbar-nav li.active a.act {
 	color: white;
 }
 
+#___plus_0 {
+	margin-left: 20px;
+}
+
+#tweet  {
+	margin-left: 20px;
+}
+
 @media only screen and (max-width:400px){
     #chart {
         width: 250px !important;

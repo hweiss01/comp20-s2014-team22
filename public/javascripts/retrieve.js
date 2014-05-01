@@ -18,14 +18,27 @@ function hello(){
 
 			table = (document.getElementById("table"));
 			var height = table.rows.length;
+			var insertflag = 0;
 
 			
 			for(var i = 1; i < height; i++){
+				insertflag = 0;
+				for(var j = 0; j < labels.length; j++){
+					if (table.rows[i].cells[1].innerHTML == labels[j])
+						{data1[j] = data1[j] + parseFloat(table.rows[i].cells[2].innerHTML);
+							insertflag = 1;}
+				}
 
-					labels.push(table.rows[i].cells[1].innerHTML);
-					data1.push(parseFloat(table.rows[i].cells[2].innerHTML));
+				if(insertflag == 0)
+					{
+						labels.push(table.rows[i].cells[1].innerHTML);
+						data1.push(parseFloat(table.rows[i].cells[2].innerHTML));
+					}
 
 				}
+
+				labels.reverse();
+				data1.reverse();
 
 			
 

@@ -5,22 +5,22 @@ html
   meta(name="viewport", content="width=device-width, initial-scale=1")
   link(rel='stylesheet', href='bootstrap/css/bootstrap.min.css')
   link(rel='stylesheet', href='bootstrap/css/bootstrap-responsive.min.css')
-  link(rel='stylesheet', href='stylesheets/retrieve.css')
   script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
   script(src='bootstrap/js/bootstrap.min.js')
   script(src='javascripts/chart/Chart.js')
   script(src='javascripts/retrieve.js')
   script(src='javascripts/twitter.js')
   script(src='https://apis.google.com/js/plusone.js')
+  link(rel='stylesheet', href='stylesheets/retrieve.css')
   body
-    nav.navbar.navbar-default.navbar-collapse(role=navigation)
+    nav.navbar.navbar-default.navbar-collapse.bar(role=navigation)
         .container-fluid
             .navbar-header
-                a(href="#").navbar-brand SpendingRetriever
+                a(href="#").navbar-brand.bar-brand SpendingRetriever
             .collapse.navbar-collapse
                 ul.nav.navbar-nav
                     li.active
-                        a(href="#") Overview
+                        a(href="#").act Overview
                     li
                         a(href="#") History
                     li

@@ -1,6 +1,6 @@
-[mockup1]: images/login_wireframe_001.png
-[mockup2]: images/mobile_wireframe_001.png
-[mockup3]: images/website_wireframe_001.png
+[mockup1]: public/images/login_wireframe_001.png
+[mockup2]: public/images/mobile_wireframe_001.png
+[mockup3]: public/images/website_wireframe_001.png
 
 README.txt
 Comp20 Semester Group Project: Team 22 

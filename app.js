@@ -91,9 +91,12 @@ app.get('/retrieve', function(req, res) {
 	// 					{'website': 'Amazon', 'date': '5/20/14', 'price': '25'}
 	// 				], 'total': total
 	// 				});
-  
-  var user = req.query["username"];//user get the login name from the login page
-  
+  var username = "no name";
+  var user = username = req.query["username"];
+  console.log("ABOUT TO GET USERNAME");
+  //username = req.query["username"];
+  //var tempname = JSON.parse(username);
+  console.log(user);
 
   db.collection(user, function(er, collection) {
 
